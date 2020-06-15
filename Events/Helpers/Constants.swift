@@ -15,4 +15,6 @@ struct Constants {
     static let accent_color = UIColor(r: 255, g: 59, b: 48)
     static let separator_color = UIColor(r: 229, g: 229, b: 229)
     static let text_placeholder_color = UIColor.black.withAlphaComponent(0.35)
+    static let background_color = UIColor(r: 248, g: 248, b: 248)
+    
 }

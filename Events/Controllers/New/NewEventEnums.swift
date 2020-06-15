@@ -14,7 +14,24 @@ enum NewEventContentType: String {
     case category = "Category"
     case date = "Date"
     case image = "Image"
-    case notification = "Notification"
+    case notifications = "Notifications"
     case create
+}
+
+enum NewEventCategory: String {
     
+    case business = "Business"
+    case travel = "Travel"
+    case birthday = "Birthday"
+    case wedding = "Wedding"
+    case other = "Other"
+    case createdByUser
+}
+
+enum NewEventNotificationsRepeat: String {
+    
+    case never = "Never"
+    case everyWeek = "Every Week"
+    case everyMonth = "Every Month"
+    case everyYear = "Every Year"
 }

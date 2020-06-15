@@ -10,7 +10,9 @@ import Foundation
 
 class EventModel {
     
-    var name = ""
-    var category = ""
-    var date = Date()
+    var name: String?
+    var category: NewEventCategory?
+    var date: Date?
+    var notifications: NewEventNotificationsRepeat?
+    
 }

@@ -10,10 +10,20 @@ import AsyncDisplayKit
 
 class EventsController: TableNodeController {
     
+    private var content: [EventModel] {
+        return DataManager.shared.events.array
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-//        setEmptyView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if content.isEmpty { setEmptyView()  } else { removeEmptyView() }
+        reloadTableNode()
     }
     
     private func updateUI() {
@@ -21,7 +31,7 @@ class EventsController: TableNodeController {
             return
         }
         
-        view.backgroundColor = UIColor(r: 248, g: 248, b: 248)
+        view.backgroundColor = Constants.background_color
         
         navBar.shadowImage = UIImage()
         navBar.layer.shadowColor = UIColor.black.withAlphaComponent(0.10).cgColor
@@ -52,6 +62,7 @@ class EventsController: TableNodeController {
         let toolBar = UIToolbar()
         toolBar.setShadowImage(UIImage(), forToolbarPosition: .any)
         toolBar.setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
+        toolBar.backgroundColor = Constants.background_color
         
         let v = UIButton(type: .system)
         v.setTitle("New Event", for: .normal)
@@ -106,15 +117,26 @@ class EventsController: TableNodeController {
 
         tableNode.view.backgroundView = emptyView
     }
+    
+    private func removeEmptyView() {
+        tableNode.view.backgroundView = nil
+    }
         
     // MARK: - TableNode Delegate
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return content.count
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
+        let c = content[indexPath.row]
         let node = EventPreviewNode()
+        
+        let daysString = DateHelper.formatDateToPreviewString(c.date!)
+        node.setNode(
+            name: c.name ?? "", days: daysString, bg: UIImage(named: "2")
+        )
+        
         return node
     }
     

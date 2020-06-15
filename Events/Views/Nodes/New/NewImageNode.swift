@@ -35,7 +35,7 @@ class NewImageNode: TableCell {
         imagePreview.image = UIImage(named: "2")
         
         titleNode.attributedText = title.setAttributes(
-            withFont: UIFont(name: "OpenSans-Regular", size: 17)!, textColor: .black, aligment: .left
+            withFont: UIFont(name: "OpenSans-SemiBold", size: 17)!, textColor: .black, aligment: .left
         )
     }
     

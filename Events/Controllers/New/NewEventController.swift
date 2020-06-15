@@ -18,16 +18,32 @@ class NewEventController: TableNodeController {
             .image
         ],
         2: [
-            .notification
+            .notifications
         ],
         3: [
             .create
         ]
     ]
     
+    let eventModel = EventModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // update row's content
+        
+        if let catNode = tableNode.nodeForRow(at: IndexPath(row: 1, section: 0)) as? NewSelectionNode {
+            catNode.setNode(title: "Category", subtitle: eventModel.category?.rawValue)
+        }
+        
+        if let notifNode = tableNode.nodeForRow(at: IndexPath(row: 0, section: 2)) as? NewSelectionNode {
+            notifNode.setNode(title: "Notifications", subtitle: eventModel.notifications?.rawValue)
+        }
     }
     
     private func updateUI() {
@@ -44,7 +60,7 @@ class NewEventController: TableNodeController {
         navBar.layer.shadowRadius = 10
         
         navBar.prefersLargeTitles = true
-        navBar.topItem?.title = "New Event"
+        title = "New Event"
         navBar.tintColor = .black
         
         navBar.titleTextAttributes = [
@@ -64,6 +80,7 @@ class NewEventController: TableNodeController {
         navigationItem.largeTitleDisplayMode = .automatic
         
         tableNode.view.separatorStyle = .none
+        tableNode.view.keyboardDismissMode = .onDrag
     }
     
     // MARK: - TableNode: Delegate
@@ -83,16 +100,18 @@ class NewEventController: TableNodeController {
         case .name:
             let node = NewTextFiledNode()
             node.set(title: c.rawValue, value: "")
+            node.textFieldNode.delegate = self
+            node.textFieldNode.returnKeyType = .done
             
             return node
         case .category:
-            let node = NewBasicNode()
-            node.setNode(title: c.rawValue, subtitle: "Select")
+            let node = NewSelectionNode()
+            node.setNode(title: c.rawValue)
             
             return node
         case .date:
-            let node = NewBasicNode()
-            node.setNode(title: c.rawValue, subtitle: "Select")
+            let node = NewSelectionNode()
+            node.setNode(title: c.rawValue)
             node.hideSeparator()
             
             return node
@@ -101,14 +120,15 @@ class NewEventController: TableNodeController {
             node.setNode(title: c.rawValue)
             
             return node
-        case .notification:
-            let node = NewBasicNode()
-            node.setNode(title: c.rawValue, subtitle: "Select")
+        case .notifications:
+            let node = NewSelectionNode()
+            node.setNode(title: c.rawValue)
             node.hideSeparator()
             
             return node
         case .create:
             let node = NewSaveButtonNode()
+            node.saveButtonNode.addTarget(self, action: #selector(createEvent), forControlEvents: .touchUpInside)
             
             return node
         }
@@ -166,9 +186,28 @@ class NewEventController: TableNodeController {
         return v
     }
     
-    // MARK: - Actions
-    
-    @objc private func dismissController() {
-        dismiss(animated: true, completion: nil)
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+        dismissKeyboard()
+        
+        let c = content[indexPath.section]![indexPath.row]
+        
+        switch c {
+        case .category:
+            let c = NewEventSelectCategoryController(withTableStyle: .grouped)
+            c.eventModel = eventModel
+            
+            navigationController?.pushViewController(c, animated: true)
+        case .date:
+            showDatePicker()
+        case .image:
+            showAlertWithSelectingImageSource()
+        case .notifications:
+            let c = NewEventNotificationsController(withTableStyle: .grouped)
+            c.eventModel = eventModel
+            
+            navigationController?.pushViewController(c, animated: true)
+        default:
+            break
+        }
     }
 }

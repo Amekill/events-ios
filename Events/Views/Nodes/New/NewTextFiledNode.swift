@@ -16,7 +16,7 @@ class NewTextFiledNode: TableCell {
     
     func set(title: String, value: String) {
         titleNode.attributedText = title.setAttributes(
-            withFont: UIFont(name: "OpenSans-Regular", size: 17)!, textColor: .black, aligment: .left
+            withFont: UIFont(name: "OpenSans-SemiBold", size: 17)!, textColor: .black, aligment: .left
         )
         
         textFieldNode.attributedText = "".setAttributes(

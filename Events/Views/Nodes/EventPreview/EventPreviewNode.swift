@@ -19,7 +19,6 @@ class EventPreviewNode: TableCell {
     
     override init() {
         super.init()
-        set()
     }
     
     override func didLoad() {
@@ -27,7 +26,6 @@ class EventPreviewNode: TableCell {
         
         image.contentMode = .scaleAspectFill
         image.cornerRadius = 5
-        image.image = UIImage(named: "2")
         
         imageShadow.cornerRadius = 5
         imageShadow.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
@@ -40,14 +38,15 @@ class EventPreviewNode: TableCell {
         titleShadow.contentMode = .scaleAspectFill
     }
     
-    private func set() {
+    func setNode(name: String, days: String, bg: UIImage?) {
         image.backgroundColor = .white
+        image.image = bg
         
-        titleNode.attributedText = "New Year".setAttributes(
+        titleNode.attributedText = name.setAttributes(
             withFont: UIFont(name: "OpenSans-Semibold", size: 20)!, textColor: .white, aligment: .left
         )
         
-        timeNode.attributedText = "In 220 days".setAttributes(
+        timeNode.attributedText = days.setAttributes(
             withFont: UIFont(name: "OpenSans-Regular", size: 16)!, textColor: .white, aligment: .left
         )
     }
