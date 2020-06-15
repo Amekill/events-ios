@@ -81,21 +81,21 @@ extension NewEventController {
         
         alert.addAction(UIAlertAction(
             title: "Library", style: .default, handler: { _ in
-                
+                self.imagePicker?.present(for: .photoLibrary)
             }
         ))
         
         alert.addAction(UIAlertAction(
-            title: "Photo", style: .default, handler: { _ in
-                
+            title: "Camera", style: .default, handler: { _ in
+                self.imagePicker?.present(for: .camera)
             }
         ))
         
-        alert.addAction(UIAlertAction(
-            title: "Network", style: .default, handler: { _ in
-                
-            }
-        ))
+//        alert.addAction(UIAlertAction(
+//            title: "Network", style: .default, handler: { _ in
+//
+//            }
+//        ))
         
         alert.addAction(UIAlertAction(
             title: "Cancel", style: .cancel, handler: nil

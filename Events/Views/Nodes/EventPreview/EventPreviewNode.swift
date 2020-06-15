@@ -15,7 +15,7 @@ class EventPreviewNode: TableCell {
     
     private let titleShadow = ASImageNode()
     private let titleNode = ASTextNode()
-    private let timeNode = ASTextNode()
+    let timeNode = ASTextNode()
     
     override init() {
         super.init()

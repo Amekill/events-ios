@@ -26,7 +26,7 @@ class SettingsController: TableNodeController {
             return
         }
         
-        view.backgroundColor = UIColor(r: 248, g: 248, b: 248)
+        view.backgroundColor = .black //UIColor(r: 248, g: 248, b: 248)
         
         navBar.shadowImage = UIImage()
         navBar.layer.shadowColor = UIColor.black.withAlphaComponent(0.10).cgColor
@@ -36,15 +36,15 @@ class SettingsController: TableNodeController {
         
         navBar.prefersLargeTitles = true
         navBar.topItem?.title = "Settings"
-        navBar.tintColor = .black
+        navBar.tintColor = .white
         
         navBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 17)!
         ]
         
         navBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 30)!
         ]
         

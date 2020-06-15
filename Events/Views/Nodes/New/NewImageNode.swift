@@ -31,8 +31,12 @@ class NewImageNode: TableCell {
         imageShadow.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
     }
     
-    func setNode(title: String) {
-        imagePreview.image = UIImage(named: "2")
+    func setNode(title: String, image: UIImage?) {
+        if let image = image {
+            imagePreview.image = image
+        } else {
+            imagePreview.image = UIImage(named: "2")
+        }
         
         titleNode.attributedText = title.setAttributes(
             withFont: UIFont(name: "OpenSans-SemiBold", size: 17)!, textColor: .black, aligment: .left

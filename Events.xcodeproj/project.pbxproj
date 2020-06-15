@@ -14,6 +14,8 @@
 		8A0E627624979F7B003BDCF6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E627524979F7B003BDCF6 /* DataManager.swift */; };
 		8A0E627824979F81003BDCF6 /* DataManagerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E627724979F81003BDCF6 /* DataManagerObject.swift */; };
 		8A0E627A2497A5B0003BDCF6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E62792497A5B0003BDCF6 /* Utilities.swift */; };
+		8A0E627D249811F0003BDCF6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E627C249811F0003BDCF6 /* ImagePicker.swift */; };
+		8A0E628124981302003BDCF6 /* NewEventController + ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E628024981302003BDCF6 /* NewEventController + ImagePicker.swift */; };
 		8A2A3EBA248C42290087BE3F /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */; };
 		8A2A3EBB248C42290087BE3F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB7248C42280087BE3F /* OpenSans-Light.ttf */; };
 		8A2A3EBC248C42290087BE3F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */; };
@@ -52,6 +54,8 @@
 		8A0E627524979F7B003BDCF6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8A0E627724979F81003BDCF6 /* DataManagerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerObject.swift; sourceTree = "<group>"; };
 		8A0E62792497A5B0003BDCF6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8A0E627C249811F0003BDCF6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8A0E628024981302003BDCF6 /* NewEventController + ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + ImagePicker.swift"; sourceTree = "<group>"; };
 		8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		8A2A3EB7248C42280087BE3F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		8A0E627B249811E1003BDCF6 /* Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E627C249811F0003BDCF6 /* ImagePicker.swift */,
+			);
+			path = "Image Picker";
+			sourceTree = "<group>";
+		};
 		8A2A3EA5248C3DAE0087BE3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +176,7 @@
 		8A2A3EAC248C3E4F0087BE3F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E627B249811E1003BDCF6 /* Image Picker */,
 				8A2A3EC1248C4D9E0087BE3F /* UIColor.swift */,
 				8A7E39D424937BF70057E1BD /* String.swift */,
 				8ADDF2C524968323007066EE /* Constants.swift */,
@@ -286,6 +299,7 @@
 				8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */,
 				8A0E626D24977A03003BDCF6 /* NewEventSelectCategoryController.swift */,
 				8A0E627124979B44003BDCF6 /* NewEventNotificationsController.swift */,
+				8A0E628024981302003BDCF6 /* NewEventController + ImagePicker.swift */,
 				8ADDF2BF24968249007066EE /* NewEventEnums.swift */,
 			);
 			path = New;
@@ -454,6 +468,7 @@
 				8ADDF2C8249685D6007066EE /* NewTextFiledNode.swift in Sources */,
 				8A5677A82493AA77002828D5 /* SettingsTextNode.swift in Sources */,
 				8A5677A52493A8F2002828D5 /* SettingsController.swift in Sources */,
+				8A0E627D249811F0003BDCF6 /* ImagePicker.swift in Sources */,
 				8A0E627624979F7B003BDCF6 /* DataManager.swift in Sources */,
 				8A7E39D3249379E20057E1BD /* TableCell.swift in Sources */,
 				8A5677AB2493AACD002828D5 /* SettingsEnums.swift in Sources */,
@@ -463,6 +478,7 @@
 				8A0E627824979F81003BDCF6 /* DataManagerObject.swift in Sources */,
 				8ADDF2CF2496A1FA007066EE /* NewImageNode.swift in Sources */,
 				8ADDF2CD2496A1A8007066EE /* EventModel.swift in Sources */,
+				8A0E628124981302003BDCF6 /* NewEventController + ImagePicker.swift in Sources */,
 				8ACAF2662496AD8300807174 /* DateHelper.swift in Sources */,
 				8AD200E42486A0A20085B204 /* SceneDelegate.swift in Sources */,
 			);

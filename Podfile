@@ -4,6 +4,8 @@ target 'Events' do
   use_frameworks!
   inhibit_all_warnings!
 
+    pod 'SPLarkController'
+
     pod 'RxCocoa-Texture'
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'

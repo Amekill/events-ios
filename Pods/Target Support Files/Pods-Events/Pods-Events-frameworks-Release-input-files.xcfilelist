@@ -10,5 +10,6 @@ ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa-Texture/RxCocoa_Texture.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SPLarkController/SPLarkController.framework
 ${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

@@ -26,10 +26,13 @@ class NewEventController: TableNodeController {
     ]
     
     let eventModel = EventModel()
+    var imagePicker: ImagePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
+        imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +42,10 @@ class NewEventController: TableNodeController {
         
         if let catNode = tableNode.nodeForRow(at: IndexPath(row: 1, section: 0)) as? NewSelectionNode {
             catNode.setNode(title: "Category", subtitle: eventModel.category?.rawValue)
+        }
+        
+        if let imageNode = tableNode.nodeForRow(at: IndexPath(row: 0, section: 1)) as? NewImageNode {
+            imageNode.setNode(title: "Image", image: eventModel.image)
         }
         
         if let notifNode = tableNode.nodeForRow(at: IndexPath(row: 0, section: 2)) as? NewSelectionNode {
@@ -117,7 +124,7 @@ class NewEventController: TableNodeController {
             return node
         case .image:
             let node = NewImageNode()
-            node.setNode(title: c.rawValue)
+            node.setNode(title: c.rawValue, image: eventModel.image)
             
             return node
         case .notifications:

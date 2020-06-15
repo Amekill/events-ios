@@ -7,13 +7,14 @@
 //
 
 import AsyncDisplayKit
+import SPLarkController
 
 class EventsController: TableNodeController {
     
     private var content: [EventModel] {
         return DataManager.shared.events.array
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -131,10 +132,17 @@ class EventsController: TableNodeController {
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
         let c = content[indexPath.row]
         let node = EventPreviewNode()
+          
+//        Observable<Int>
+//            .interval(.seconds(1), scheduler: MainScheduler.instance)
+//            .subscribe({ _ in
+//
+//            }).disposed(by: disposeBag)
         
         let daysString = DateHelper.formatDateToPreviewString(c.date!)
+        
         node.setNode(
-            name: c.name ?? "", days: daysString, bg: UIImage(named: "2")
+            name: c.name ?? "", days: daysString, bg: c.image
         )
         
         return node
@@ -144,7 +152,8 @@ class EventsController: TableNodeController {
     
     @objc private func openSettings() {
         let c = UINavigationController(rootViewController: SettingsController(withTableStyle: .grouped))
-        present(c, animated: true, completion: nil)
+        presentAsLark(c)
+//        present(c, animated: true, completion: nil)
     }
     
     @objc private func newEvent() {

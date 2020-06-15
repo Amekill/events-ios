@@ -6,13 +6,14 @@
 //  Copyright © 2020 Alexey Kostenko. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class EventModel {
     
     var name: String?
     var category: NewEventCategory?
     var date: Date?
+    var image: UIImage?
     var notifications: NewEventNotificationsRepeat?
     
 }

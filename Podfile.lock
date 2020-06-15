@@ -97,6 +97,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SPLarkController (1.1.5)
   - Texture (2.8.1):
     - Texture/AssetsLibrary (= 2.8.1)
     - Texture/Core (= 2.8.1)
@@ -124,6 +125,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxCocoa-Texture
   - RxSwift (~> 5)
+  - SPLarkController
 
 SPEC REPOS:
   trunk:
@@ -148,6 +150,7 @@ SPEC REPOS:
     - RxCocoa-Texture
     - RxRelay
     - RxSwift
+    - SPLarkController
     - Texture
 
 SPEC CHECKSUMS:
@@ -172,8 +175,9 @@ SPEC CHECKSUMS:
   RxCocoa-Texture: 90abb54f5d153746fe414f4d04e6d2e6cf91d70e
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SPLarkController: 36a5db07b4609f808c8d520fc30c56ecdaa25c73
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: de2992f892c5fc7bce6b90787a96393089e1a22d
+PODFILE CHECKSUM: edf0c4d87a354ec20bcc3ffd66d6b334b2479bae
 
 COCOAPODS: 1.8.4
