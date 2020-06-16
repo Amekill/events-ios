@@ -21,6 +21,8 @@
 		8A2A3EBC248C42290087BE3F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */; };
 		8A2A3EBD248C42290087BE3F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */; };
 		8A2A3EC2248C4D9E0087BE3F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2A3EC1248C4D9E0087BE3F /* UIColor.swift */; };
+		8A39D8B72498C94100E9FFD2 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */; };
+		8A39D8BC2498CC1200E9FFD2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */; };
 		8A5677A52493A8F2002828D5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A42493A8F2002828D5 /* SettingsController.swift */; };
 		8A5677A82493AA77002828D5 /* SettingsTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A72493AA77002828D5 /* SettingsTextNode.swift */; };
 		8A5677AB2493AACD002828D5 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677AA2493AACD002828D5 /* SettingsEnums.swift */; };
@@ -61,6 +63,8 @@
 		8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		8A2A3EC1248C4D9E0087BE3F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
 		8A5677A42493A8F2002828D5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		8A5677A72493AA77002828D5 /* SettingsTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextNode.swift; sourceTree = "<group>"; };
 		8A5677AA2493AACD002828D5 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		8A0E627324979F6A003BDCF6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				8A39D8B82498CBF500E9FFD2 /* DefaultStorage */,
 				8A0E627424979F72003BDCF6 /* DataManager */,
 			);
 			path = Managers;
@@ -195,6 +200,14 @@
 				8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8A39D8B82498CBF500E9FFD2 /* DefaultStorage */ = {
+			isa = PBXGroup;
+			children = (
+				8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */,
+			);
+			path = DefaultStorage;
 			sourceTree = "<group>";
 		};
 		8A5677A62493AA62002828D5 /* Settings */ = {
@@ -321,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				8ADDF2CC2496A1A8007066EE /* EventModel.swift */,
+				8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,11 +474,13 @@
 				8A0E626E24977A03003BDCF6 /* NewEventSelectCategoryController.swift in Sources */,
 				8A0E627224979B44003BDCF6 /* NewEventNotificationsController.swift in Sources */,
 				8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */,
+				8A39D8BC2498CC1200E9FFD2 /* DefaultStorage.swift in Sources */,
 				8ADDF2C024968249007066EE /* NewEventEnums.swift in Sources */,
 				8ADDF2BE2496810B007066EE /* NewEventController.swift in Sources */,
 				8ADDF2D12496AA38007066EE /* NewEventController + ASEditableTextNode.swift in Sources */,
 				8A0E627024977B87003BDCF6 /* NewBasicNode.swift in Sources */,
 				8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */,
+				8A39D8B72498C94100E9FFD2 /* SettingsModel.swift in Sources */,
 				8ADDF2C8249685D6007066EE /* NewTextFiledNode.swift in Sources */,
 				8A5677A82493AA77002828D5 /* SettingsTextNode.swift in Sources */,
 				8A5677A52493A8F2002828D5 /* SettingsController.swift in Sources */,

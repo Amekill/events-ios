@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
                 
+        // check first launch
+        
+        let f = DefaultStorage.shared.get(forKey: .firstLaunch)
+        if f == nil {
+            DefaultStorage.shared.save(data: "date", forKey: .sortedBy)
+            
+            DefaultStorage.shared.save(data: "no", forKey: .firstLaunch)
+        }
+        
         return true
     }
 

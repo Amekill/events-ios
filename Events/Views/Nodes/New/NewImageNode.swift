@@ -22,6 +22,8 @@ class NewImageNode: TableCell {
         indicator.image = UIImage(named: "i_arrow_right")
         imagePreview.contentMode = .scaleAspectFill
         imagePreview.cornerRadius = 5
+        imagePreview.clipsToBounds = true
+        imageShadow.cornerRadius = 5
         
         imageTitle.attributedText = "Current background".setAttributes(
             withFont: UIFont(name: "OpenSans-Bold", size: 15)!, textColor: .white, aligment: .left

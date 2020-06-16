@@ -105,10 +105,14 @@ extension NewEventController {
     }
     
     @objc func createEvent() {
+        let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        notificationFeedbackGenerator.prepare()
+        
         guard eventModel.name != nil else {
             Utilities.showAlertController(
                 onController: self, withTitle: "Error", message: "The field name must be filled!"
             )
+            notificationFeedbackGenerator.notificationOccurred(.warning)
             
             return
         }
@@ -117,6 +121,7 @@ extension NewEventController {
             Utilities.showAlertController(
                 onController: self, withTitle: "Error", message: "The field category must be selected!"
             )
+            notificationFeedbackGenerator.notificationOccurred(.warning)
             
             return
         }
@@ -125,6 +130,7 @@ extension NewEventController {
             Utilities.showAlertController(
                 onController: self, withTitle: "Error", message: "The field date must be selected!"
             )
+            notificationFeedbackGenerator.notificationOccurred(.warning)
             
             return
         }
@@ -133,6 +139,7 @@ extension NewEventController {
             Utilities.showAlertController(
                 onController: self, withTitle: "Error", message: "The field notification must be selected!"
             )
+            notificationFeedbackGenerator.notificationOccurred(.warning)
             
             return
         }
@@ -140,5 +147,6 @@ extension NewEventController {
         DataManager.shared.events.array.append(eventModel)
         
         dismissController()
+        notificationFeedbackGenerator.notificationOccurred(.success)
     }
 }

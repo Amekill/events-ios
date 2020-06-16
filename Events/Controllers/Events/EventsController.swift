@@ -151,12 +151,19 @@ class EventsController: TableNodeController {
     // MARK: - Actions
     
     @objc private func openSettings() {
-        let c = UINavigationController(rootViewController: SettingsController(withTableStyle: .grouped))
+        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
+        impactFeedbackgenerator.prepare()
+        impactFeedbackgenerator.impactOccurred()
+        
+        let c = SettingsController()
         presentAsLark(c)
-//        present(c, animated: true, completion: nil)
     }
     
     @objc private func newEvent() {
+        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
+        impactFeedbackgenerator.prepare()
+        impactFeedbackgenerator.impactOccurred()
+        
         let c = UINavigationController(rootViewController: NewEventController(withTableStyle: .grouped))
         c.modalPresentationStyle = .fullScreen
         
