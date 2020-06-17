@@ -13,6 +13,7 @@ import AsyncDisplayKit
 extension NewEventController {
     
     @objc func dismissController() {
+        TapticHelper.generateImpact(style: .light)
         dismiss(animated: true, completion: nil)
     }
     

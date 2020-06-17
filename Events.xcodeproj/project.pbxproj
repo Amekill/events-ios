@@ -23,6 +23,8 @@
 		8A2A3EC2248C4D9E0087BE3F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2A3EC1248C4D9E0087BE3F /* UIColor.swift */; };
 		8A39D8B72498C94100E9FFD2 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */; };
 		8A39D8BC2498CC1200E9FFD2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */; };
+		8A39D8C02499615100E9FFD2 /* EventFullController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8BF2499615100E9FFD2 /* EventFullController.swift */; };
+		8A39D8C32499FDA100E9FFD2 /* EventFullNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39D8C22499FDA100E9FFD2 /* EventFullNode.swift */; };
 		8A5677A52493A8F2002828D5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A42493A8F2002828D5 /* SettingsController.swift */; };
 		8A5677A82493AA77002828D5 /* SettingsTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A72493AA77002828D5 /* SettingsTextNode.swift */; };
 		8A5677AB2493AACD002828D5 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677AA2493AACD002828D5 /* SettingsEnums.swift */; };
@@ -31,6 +33,9 @@
 		8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */; };
 		8A7E39D3249379E20057E1BD /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D2249379E20057E1BD /* TableCell.swift */; };
 		8A7E39D524937BF70057E1BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D424937BF70057E1BD /* String.swift */; };
+		8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */; };
+		8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */; };
+		8ABF0E74249A7D570030B6A0 /* EditEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E73249A7D570030B6A0 /* EditEventController.swift */; };
 		8ACAF2662496AD8300807174 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2652496AD8300807174 /* DateHelper.swift */; };
 		8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */; };
 		8AD200E22486A0A20085B204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD200E12486A0A20085B204 /* AppDelegate.swift */; };
@@ -65,6 +70,8 @@
 		8A2A3EC1248C4D9E0087BE3F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
+		8A39D8BF2499615100E9FFD2 /* EventFullController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFullController.swift; sourceTree = "<group>"; };
+		8A39D8C22499FDA100E9FFD2 /* EventFullNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFullNode.swift; sourceTree = "<group>"; };
 		8A5677A42493A8F2002828D5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		8A5677A72493AA77002828D5 /* SettingsTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextNode.swift; sourceTree = "<group>"; };
 		8A5677AA2493AACD002828D5 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
@@ -73,6 +80,9 @@
 		8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewNode.swift; sourceTree = "<group>"; };
 		8A7E39D2249379E20057E1BD /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		8A7E39D424937BF70057E1BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventFullController + Actions.swift"; sourceTree = "<group>"; };
+		8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticHelper.swift; sourceTree = "<group>"; };
+		8ABF0E73249A7D570030B6A0 /* EditEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventController.swift; sourceTree = "<group>"; };
 		8ACAF2652496AD8300807174 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + Actions.swift"; sourceTree = "<group>"; };
 		8AD200DE2486A0A20085B204 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +197,7 @@
 				8ADDF2C524968323007066EE /* Constants.swift */,
 				8ACAF2652496AD8300807174 /* DateHelper.swift */,
 				8A0E62792497A5B0003BDCF6 /* Utilities.swift */,
+				8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +221,14 @@
 			path = DefaultStorage;
 			sourceTree = "<group>";
 		};
+		8A39D8C12499FD8F00E9FFD2 /* Event Full */ = {
+			isa = PBXGroup;
+			children = (
+				8A39D8C22499FDA100E9FFD2 /* EventFullNode.swift */,
+			);
+			path = "Event Full";
+			sourceTree = "<group>";
+		};
 		8A5677A62493AA62002828D5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				8A7E39C82492A8840057E1BD /* EventsController.swift */,
+				8ABF0E6F249A7A630030B6A0 /* Full */,
+				8ABF0E72249A7D4C0030B6A0 /* Edit */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -246,28 +267,46 @@
 		8A7E39CD249379AE0057E1BD /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				8A7E39D1249379D70057E1BD /* Base */,
-				8A7E39CE249379B20057E1BD /* EventPreview */,
+				8A7E39D1249379D70057E1BD /* Base Table  */,
+				8A7E39CE249379B20057E1BD /* Event Preview */,
+				8A39D8C12499FD8F00E9FFD2 /* Event Full */,
 				8ADDF2C1249682DD007066EE /* New */,
 				8A5677A62493AA62002828D5 /* Settings */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
 		};
-		8A7E39CE249379B20057E1BD /* EventPreview */ = {
+		8A7E39CE249379B20057E1BD /* Event Preview */ = {
 			isa = PBXGroup;
 			children = (
 				8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */,
 			);
-			path = EventPreview;
+			path = "Event Preview";
 			sourceTree = "<group>";
 		};
-		8A7E39D1249379D70057E1BD /* Base */ = {
+		8A7E39D1249379D70057E1BD /* Base Table  */ = {
 			isa = PBXGroup;
 			children = (
 				8A7E39D2249379E20057E1BD /* TableCell.swift */,
 			);
-			path = Base;
+			path = "Base Table ";
+			sourceTree = "<group>";
+		};
+		8ABF0E6F249A7A630030B6A0 /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				8A39D8BF2499615100E9FFD2 /* EventFullController.swift */,
+				8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		8ABF0E72249A7D4C0030B6A0 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF0E73249A7D570030B6A0 /* EditEventController.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		8AD200D52486A0A20085B204 = {
@@ -468,8 +507,11 @@
 				8A7E39C92492A8840057E1BD /* EventsController.swift in Sources */,
 				8ADDF2C624968323007066EE /* Constants.swift in Sources */,
 				8A0E627A2497A5B0003BDCF6 /* Utilities.swift in Sources */,
+				8A39D8C32499FDA100E9FFD2 /* EventFullNode.swift in Sources */,
 				8A2A3EC2248C4D9E0087BE3F /* UIColor.swift in Sources */,
 				8ADDF2CA24968A40007066EE /* NewSelectionNode.swift in Sources */,
+				8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */,
+				8ABF0E74249A7D570030B6A0 /* EditEventController.swift in Sources */,
 				8A7E39D524937BF70057E1BD /* String.swift in Sources */,
 				8A0E626E24977A03003BDCF6 /* NewEventSelectCategoryController.swift in Sources */,
 				8A0E627224979B44003BDCF6 /* NewEventNotificationsController.swift in Sources */,
@@ -479,6 +521,7 @@
 				8ADDF2BE2496810B007066EE /* NewEventController.swift in Sources */,
 				8ADDF2D12496AA38007066EE /* NewEventController + ASEditableTextNode.swift in Sources */,
 				8A0E627024977B87003BDCF6 /* NewBasicNode.swift in Sources */,
+				8A39D8C02499615100E9FFD2 /* EventFullController.swift in Sources */,
 				8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */,
 				8A39D8B72498C94100E9FFD2 /* SettingsModel.swift in Sources */,
 				8ADDF2C8249685D6007066EE /* NewTextFiledNode.swift in Sources */,
@@ -493,6 +536,7 @@
 				8ADDF2C3249682F1007066EE /* NewSaveButtonNode.swift in Sources */,
 				8A0E627824979F81003BDCF6 /* DataManagerObject.swift in Sources */,
 				8ADDF2CF2496A1FA007066EE /* NewImageNode.swift in Sources */,
+				8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */,
 				8ADDF2CD2496A1A8007066EE /* EventModel.swift in Sources */,
 				8A0E628124981302003BDCF6 /* NewEventController + ImagePicker.swift in Sources */,
 				8ACAF2662496AD8300807174 /* DateHelper.swift in Sources */,

@@ -18,6 +18,19 @@ class EventsController: TableNodeController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
+        let event = EventModel()
+        event.name = "Event name"
+        event.category = .birthday
+        event.date = Date()
+        event.notifications = .everyMonth
+        
+        DataManager.shared.events.saveNewArray([event])
+    }
+    
+    override func loadView() {
+        super.loadView()
+        setColors()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +38,23 @@ class EventsController: TableNodeController {
         
         if content.isEmpty { setEmptyView()  } else { removeEmptyView() }
         reloadTableNode()
+        animate()
+    }
+    
+    private func animate() {
+        guard let coordinator = self.transitionCoordinator else {
+            return
+        }
+
+        coordinator.animate(alongsideTransition: {
+            [weak self] context in
+            self?.setColors()
+        }, completion: nil)
+    }
+
+    private func setColors() {
+        navigationController?.navigationBar.tintColor = .black
+//        navigationController?.navigationBar.barTintColor = .red
     }
     
     private func updateUI() {
@@ -39,9 +69,14 @@ class EventsController: TableNodeController {
         navBar.layer.shadowOpacity = 1
         navBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         navBar.layer.shadowRadius = 10
+        navBar.barStyle = .default
+        
+        navBar.backIndicatorImage = UIImage(named: "i_arrow_back_white")
+        navBar.backIndicatorTransitionMaskImage = UIImage(named: "i_arrow_back_white")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         
         navBar.prefersLargeTitles = true
-        navBar.topItem?.title = "All Events"
+        title = "All Events"
         navBar.tintColor = .black
         
         navBar.titleTextAttributes = [
@@ -148,25 +183,29 @@ class EventsController: TableNodeController {
         return node
     }
     
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+        TapticHelper.generateImpact(style: .light)
+        
+        let event = content[indexPath.row]
+        let c = EventFullController()
+        c.event = event
+
+        navigationController?.pushViewController(c, animated: true)
+    }
+    
     // MARK: - Actions
     
     @objc private func openSettings() {
-        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
-        impactFeedbackgenerator.prepare()
-        impactFeedbackgenerator.impactOccurred()
+        TapticHelper.generateImpact(style: .light)
         
         let c = SettingsController()
         presentAsLark(c)
     }
     
     @objc private func newEvent() {
-        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
-        impactFeedbackgenerator.prepare()
-        impactFeedbackgenerator.impactOccurred()
+        TapticHelper.generateImpact(style: .light)
         
         let c = UINavigationController(rootViewController: NewEventController(withTableStyle: .grouped))
-        c.modalPresentationStyle = .fullScreen
-        
         present(c, animated: true, completion: nil)
     }
 }

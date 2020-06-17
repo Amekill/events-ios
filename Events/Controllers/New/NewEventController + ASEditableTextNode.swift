@@ -13,7 +13,6 @@ import AsyncDisplayKit
 extension NewEventController: ASEditableTextNodeDelegate {
     
     func editableTextNode(_ editableTextNode: ASEditableTextNode, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
         if (text == "\n") {
             editableTextNode.resignFirstResponder()
         }

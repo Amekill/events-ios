@@ -48,6 +48,8 @@ class SettingsController: SPLarkSettingsController {
     }
     
     override func settingDidSelect(index: Int, completion: @escaping () -> ()) {
+        TapticHelper.generateImpact(style: .light)
+        
         switch content[index] {
         case .sortBy:
             if settingsModel.sortedBy == .date {
@@ -64,6 +66,7 @@ class SettingsController: SPLarkSettingsController {
         reload(index: index)
     }
 }
+
 //class SettingsController: TableNodeController {
 //    
 //    private var content: [Int: [SettingsContentType]] = [
