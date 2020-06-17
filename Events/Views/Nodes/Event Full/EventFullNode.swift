@@ -11,16 +11,14 @@ import AsyncDisplayKit
 class EventFullNode: ASDisplayNode {
     
     private let indicator = ASImageNode()
-    private let name = ASTextNode()
-    private let time = ASTextNode()
-    private let date = ASTextNode()
+    private let nameNode = ASTextNode()
+    private let timeNode = ASTextNode()
+    private let dateNode = ASTextNode()
     
     override init() {
         super.init()
         
         automaticallyManagesSubnodes = true
-//        backgroundColor = .red
-        set()
     }
     
     override func didLoad() {
@@ -30,16 +28,16 @@ class EventFullNode: ASDisplayNode {
         indicator.imageModificationBlock = ASImageNodeTintColorModificationBlock(.green)
     }
     
-    func set() {
-        time.attributedText = "Today".setAttributes(
+    func setNode(time: String, name: String, date: String) {
+        timeNode.attributedText = time.setAttributes(
             withFont: UIFont(name: "OpenSans-SemiBold", size: 32)!, textColor: .white, aligment: .left
         )
         
-        name.attributedText = "Event Name".setAttributes(
+        nameNode.attributedText = name.setAttributes(
             withFont: UIFont(name: "OpenSans-Regular", size: 17)!, textColor: .white, aligment: .left
         )
         
-        date.attributedText = "December 31, 2018".uppercased().setAttributes(
+        dateNode.attributedText = date.uppercased().setAttributes(
             withFont: UIFont(name: "OpenSans-Regular", size: 12)!, textColor: UIColor.white.withAlphaComponent(0.75), aligment: .left
         )
     }
@@ -49,12 +47,12 @@ class EventFullNode: ASDisplayNode {
         
         let timeStack = ASStackLayoutSpec(
             direction: .horizontal, spacing: 2, justifyContent: .start, alignItems: .center,
-            children: [indicator, time]
+            children: [indicator, timeNode]
         )
         
         let content = ASStackLayoutSpec(
             direction: .vertical, spacing: 0, justifyContent: .start, alignItems: .stretch,
-            children: [timeStack, name, date]
+            children: [timeStack, nameNode, dateNode]
         )
         
         let insets = ASInsetLayoutSpec(

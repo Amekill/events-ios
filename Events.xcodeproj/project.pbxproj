@@ -35,7 +35,7 @@
 		8A7E39D524937BF70057E1BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D424937BF70057E1BD /* String.swift */; };
 		8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */; };
 		8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */; };
-		8ABF0E74249A7D570030B6A0 /* EditEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E73249A7D570030B6A0 /* EditEventController.swift */; };
+		8ABF0E76249AC0C50030B6A0 /* EventFullEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */; };
 		8ACAF2662496AD8300807174 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2652496AD8300807174 /* DateHelper.swift */; };
 		8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */; };
 		8AD200E22486A0A20085B204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD200E12486A0A20085B204 /* AppDelegate.swift */; };
@@ -82,7 +82,7 @@
 		8A7E39D424937BF70057E1BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventFullController + Actions.swift"; sourceTree = "<group>"; };
 		8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticHelper.swift; sourceTree = "<group>"; };
-		8ABF0E73249A7D570030B6A0 /* EditEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventController.swift; sourceTree = "<group>"; };
+		8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFullEnums.swift; sourceTree = "<group>"; };
 		8ACAF2652496AD8300807174 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + Actions.swift"; sourceTree = "<group>"; };
 		8AD200DE2486A0A20085B204 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +251,6 @@
 			children = (
 				8A7E39C82492A8840057E1BD /* EventsController.swift */,
 				8ABF0E6F249A7A630030B6A0 /* Full */,
-				8ABF0E72249A7D4C0030B6A0 /* Edit */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -297,16 +296,9 @@
 			children = (
 				8A39D8BF2499615100E9FFD2 /* EventFullController.swift */,
 				8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */,
+				8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */,
 			);
 			path = Full;
-			sourceTree = "<group>";
-		};
-		8ABF0E72249A7D4C0030B6A0 /* Edit */ = {
-			isa = PBXGroup;
-			children = (
-				8ABF0E73249A7D570030B6A0 /* EditEventController.swift */,
-			);
-			path = Edit;
 			sourceTree = "<group>";
 		};
 		8AD200D52486A0A20085B204 = {
@@ -511,7 +503,6 @@
 				8A2A3EC2248C4D9E0087BE3F /* UIColor.swift in Sources */,
 				8ADDF2CA24968A40007066EE /* NewSelectionNode.swift in Sources */,
 				8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */,
-				8ABF0E74249A7D570030B6A0 /* EditEventController.swift in Sources */,
 				8A7E39D524937BF70057E1BD /* String.swift in Sources */,
 				8A0E626E24977A03003BDCF6 /* NewEventSelectCategoryController.swift in Sources */,
 				8A0E627224979B44003BDCF6 /* NewEventNotificationsController.swift in Sources */,
@@ -532,6 +523,7 @@
 				8A7E39D3249379E20057E1BD /* TableCell.swift in Sources */,
 				8A5677AB2493AACD002828D5 /* SettingsEnums.swift in Sources */,
 				8AD200E22486A0A20085B204 /* AppDelegate.swift in Sources */,
+				8ABF0E76249AC0C50030B6A0 /* EventFullEnums.swift in Sources */,
 				8A7E39CC2492A8B70057E1BD /* TableNodeController.swift in Sources */,
 				8ADDF2C3249682F1007066EE /* NewSaveButtonNode.swift in Sources */,
 				8A0E627824979F81003BDCF6 /* DataManagerObject.swift in Sources */,

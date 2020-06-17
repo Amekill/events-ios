@@ -25,7 +25,9 @@ class NewEventController: TableNodeController {
         ]
     ]
     
-    let eventModel = EventModel()
+    var eventModel = EventModel()
+    var editorMode = false
+    
     var imagePicker: ImagePicker?
     
     override func viewDidLoad() {
@@ -67,7 +69,7 @@ class NewEventController: TableNodeController {
         navBar.layer.shadowRadius = 10
         
         navBar.prefersLargeTitles = true
-        title = "New Event"
+        title = editorMode ? "Edit Event" : "New Event"
         navBar.tintColor = .black
         
         navBar.titleTextAttributes = [
@@ -106,7 +108,7 @@ class NewEventController: TableNodeController {
         switch c {
         case .name:
             let node = NewTextFiledNode()
-            node.set(title: c.rawValue, value: "")
+            node.set(title: c.rawValue, value: eventModel.name ?? "")
             node.textFieldNode.delegate = self
             node.textFieldNode.returnKeyType = .done
             
@@ -118,7 +120,14 @@ class NewEventController: TableNodeController {
             return node
         case .date:
             let node = NewSelectionNode()
-            node.setNode(title: c.rawValue)
+            
+            if let d = eventModel.date {
+                let date = DateHelper.formatDate(d, format: "dd.MM.yyyy HH:mm")
+                node.setNode(title: c.rawValue, subtitle: date)
+            } else {
+                node.setNode(title: c.rawValue)
+            }
+            
             node.hideSeparator()
             
             return node
@@ -205,7 +214,7 @@ class NewEventController: TableNodeController {
             
             navigationController?.pushViewController(c, animated: true)
         case .date:
-            showDatePicker()
+            showDatePicker(eventModel.date)
         case .image:
             showAlertWithSelectingImageSource()
         case .notifications:

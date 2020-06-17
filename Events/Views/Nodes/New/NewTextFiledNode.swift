@@ -19,7 +19,7 @@ class NewTextFiledNode: TableCell {
             withFont: UIFont(name: "OpenSans-SemiBold", size: 17)!, textColor: .black, aligment: .left
         )
         
-        textFieldNode.attributedText = "".setAttributes(
+        textFieldNode.attributedText = value.setAttributes(
             withFont: UIFont(name: "OpenSans-Regular", size: 16)!, textColor: .black, aligment: .left
         )
         

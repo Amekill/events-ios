@@ -19,7 +19,7 @@ extension EventFullController {
         
         alert.addAction(UIAlertAction(
             title: "Edit", style: .default, handler: { _ in
-                
+                self.editEvent()
             }
         ))
         
@@ -37,7 +37,7 @@ extension EventFullController {
     }
     
     private func confirmDelete() {
-        let alert = UIAlertController(title: "Confirm action", message: "Are you sure you want to delete?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Confirm", message: "Are you sure you want to delete?", preferredStyle: .alert)
         
         
         alert.addAction(UIAlertAction(
@@ -51,5 +51,17 @@ extension EventFullController {
         ))
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func editEvent() {
+        guard let event = event else {
+            return
+        }
+        
+        let c = NewEventController(withTableStyle: .grouped)
+        c.eventModel = event
+        c.editorMode = true
+        
+        present(UINavigationController(rootViewController: c), animated: true, completion: nil)
     }
 }

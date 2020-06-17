@@ -87,5 +87,7 @@ class EventFullController: ASViewController<ASDisplayNode> {
         
         node.addSubnode(backgroundImage)
         node.addSubnode(elementsNode)
+        
+        elementsNode.setNode(time: "Today", name: event?.name ?? "", date: "String")
     }
 }

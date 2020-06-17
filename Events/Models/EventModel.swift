@@ -15,5 +15,6 @@ class EventModel {
     var date: Date?
     var image: UIImage?
     var notifications: NewEventNotificationsRepeat?
+    var dateFormat: EventDateFormat = .days
     
 }
