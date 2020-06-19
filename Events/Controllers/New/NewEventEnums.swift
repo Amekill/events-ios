@@ -20,18 +20,48 @@ enum NewEventContentType: String {
 
 enum NewEventCategory: String {
     
-    case business = "Business"
-    case travel = "Travel"
-    case birthday = "Birthday"
-    case wedding = "Wedding"
-    case other = "Other"
+    case business
+    case travel
+    case birthday
+    case wedding
+    case other
     case createdByUser
+    
+    var title: String {
+        switch self {
+        case .business:
+            return "Business"
+        case .travel:
+            return "Travel"
+        case .birthday:
+            return "Birthday"
+        case .wedding:
+            return "Wedding"
+        case .other:
+            return "Other"
+        default:
+            return ""
+        }
+    }
 }
 
 enum NewEventNotificationsRepeat: String {
     
-    case never = "Never"
-    case everyWeek = "Every Week"
-    case everyMonth = "Every Month"
-    case everyYear = "Every Year"
+    case never
+    case everyWeek
+    case everyMonth
+    case everyYear
+    
+    var title: String {
+        switch self {
+        case .never:
+            return "Never"
+        case .everyWeek:
+            return "Every Week"
+        case .everyMonth:
+            return "Every Month"
+        case .everyYear:
+            return "Every Year"
+        }
+    }
 }

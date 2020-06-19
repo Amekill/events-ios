@@ -6,8 +6,11 @@
 //  Copyright © 2020 Alexey Kostenko. All rights reserved.
 //
 
-enum EventDateFormat {
+enum EventDateFormat: String {
     
     case days
-    
+    case weeksDays
+    case monthsWeeks
+    case monthsDays
+    case yearsMonths
 }

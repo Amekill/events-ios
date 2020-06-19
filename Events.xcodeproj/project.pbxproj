@@ -36,6 +36,9 @@
 		8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */; };
 		8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */; };
 		8ABF0E76249AC0C50030B6A0 /* EventFullEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */; };
+		8ABF0E79249B404B0030B6A0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E78249B404B0030B6A0 /* RealmManager.swift */; };
+		8ABF0E7B249BA5800030B6A0 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */; };
+		8ABF0E7E249BB1CF0030B6A0 /* RLMEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E7D249BB1CF0030B6A0 /* RLMEvent.swift */; };
 		8ACAF2662496AD8300807174 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2652496AD8300807174 /* DateHelper.swift */; };
 		8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */; };
 		8AD200E22486A0A20085B204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD200E12486A0A20085B204 /* AppDelegate.swift */; };
@@ -83,6 +86,9 @@
 		8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventFullController + Actions.swift"; sourceTree = "<group>"; };
 		8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticHelper.swift; sourceTree = "<group>"; };
 		8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFullEnums.swift; sourceTree = "<group>"; };
+		8ABF0E78249B404B0030B6A0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		8ABF0E7D249BB1CF0030B6A0 /* RLMEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMEvent.swift; sourceTree = "<group>"; };
 		8ACAF2652496AD8300807174 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + Actions.swift"; sourceTree = "<group>"; };
 		8AD200DE2486A0A20085B204 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +134,7 @@
 		8A0E627324979F6A003BDCF6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				8ABF0E77249B3FCF0030B6A0 /* RealmManager */,
 				8A39D8B82498CBF500E9FFD2 /* DefaultStorage */,
 				8A0E627424979F72003BDCF6 /* DataManager */,
 			);
@@ -198,6 +205,7 @@
 				8ACAF2652496AD8300807174 /* DateHelper.swift */,
 				8A0E62792497A5B0003BDCF6 /* Utilities.swift */,
 				8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */,
+				8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +307,23 @@
 				8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */,
 			);
 			path = Full;
+			sourceTree = "<group>";
+		};
+		8ABF0E77249B3FCF0030B6A0 /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF0E78249B404B0030B6A0 /* RealmManager.swift */,
+				8ABF0E7C249BB1CA0030B6A0 /* Objects */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		8ABF0E7C249BB1CA0030B6A0 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF0E7D249BB1CF0030B6A0 /* RLMEvent.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		8AD200D52486A0A20085B204 = {
@@ -504,10 +529,13 @@
 				8ADDF2CA24968A40007066EE /* NewSelectionNode.swift in Sources */,
 				8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */,
 				8A7E39D524937BF70057E1BD /* String.swift in Sources */,
+				8ABF0E7B249BA5800030B6A0 /* ImageHelper.swift in Sources */,
 				8A0E626E24977A03003BDCF6 /* NewEventSelectCategoryController.swift in Sources */,
 				8A0E627224979B44003BDCF6 /* NewEventNotificationsController.swift in Sources */,
 				8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */,
+				8ABF0E79249B404B0030B6A0 /* RealmManager.swift in Sources */,
 				8A39D8BC2498CC1200E9FFD2 /* DefaultStorage.swift in Sources */,
+				8ABF0E7E249BB1CF0030B6A0 /* RLMEvent.swift in Sources */,
 				8ADDF2C024968249007066EE /* NewEventEnums.swift in Sources */,
 				8ADDF2BE2496810B007066EE /* NewEventController.swift in Sources */,
 				8ADDF2D12496AA38007066EE /* NewEventController + ASEditableTextNode.swift in Sources */,

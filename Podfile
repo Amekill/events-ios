@@ -10,8 +10,7 @@ target 'Events' do
     pod 'RxCocoa-Texture'
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
-
-    pod 'RealmSwift'
+    pod "RxRealm"
 
     pod 'Firebase/Analytics'
 

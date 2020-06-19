@@ -42,7 +42,7 @@ class NewEventNotificationsController: TableNodeController {
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
         let c = content[indexPath.section]![indexPath.row]
         let node = NewBasicNode()
-        node.set(title: c.rawValue)
+        node.set(title: c.title)
         
         if c != eventModel?.notifications {
             node.hideAccessoryIndicator()

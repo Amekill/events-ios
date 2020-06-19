@@ -8,24 +8,77 @@
 
 import AsyncDisplayKit
 import SPLarkController
+import RxCocoa
+import RxSwift
 
 class EventsController: TableNodeController {
     
-    private var content: [EventModel] {
-        return DataManager.shared.events.array
+    private var content = [EventModel]()
+    private let disposeBag = DisposeBag()
+    private var eventsObject: Disposable?
+    
+    deinit {
+        eventsObject?.dispose()
     }
+    
+    private func loadEvents() -> Disposable {
+        eventsObject?.dispose()
         
+        return RealmManager.shared.event.getEvents { events in
+            self.content.removeAll(keepingCapacity: true)
+            
+            for e in events {
+                let event = self.rlmToLocal(e)
+                self.content.append(event)
+            }
+
+            self.reloadTableNode()
+        }.subscribe(onNext: { array, changes in
+            for d in changes.deleted {
+                self.content.remove(at: d)
+            }
+            
+            for i in changes.inserted {
+                let event = self.rlmToLocal(array[i])
+                self.content.insert(event, at: i)
+            }
+            
+            for u in changes.updated {
+                self.content[u] = self.rlmToLocal(array[u])
+            }
+            
+            self.tableNode.performBatchUpdates({
+                self.tableNode.deleteRows(at: changes.deleted.map({ IndexPath(row: $0, section: 0)}), with: .automatic)
+                self.tableNode.insertRows(at: changes.inserted.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+                self.tableNode.reloadRows(at: changes.updated.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+            }, completion: nil)
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+
+        appReturnedFromBackground()
+            .subscribe(onNext: { _ in
+                self.reloadTableNode()
+            })
+        .disposed(by: disposeBag)
         
+        eventsObject = loadEvents()
+    }
+    
+    private func rlmToLocal(_ e: RLMEventModel) -> EventModel {
         let event = EventModel()
-        event.name = "Event name"
-        event.category = .birthday
-        event.date = Date()
-        event.notifications = .everyMonth
+        event.id = e.id
+        event.name = e.name
+        event.category = NewEventCategory(rawValue: e.category)
+        event.date = e.date
+        event.image = ImageHelper.loadImageFromDocumentDirectory(fileName: e.image)
+        event.notifications = NewEventNotificationsRepeat(rawValue: e.notifications)
+        event.dateFormat = EventDateFormat(rawValue: e.dateFormat) ?? .days
         
-        DataManager.shared.events.saveNewArray([event])
+        return event
     }
     
     override func loadView() {
@@ -54,7 +107,6 @@ class EventsController: TableNodeController {
 
     private func setColors() {
         navigationController?.navigationBar.tintColor = .black
-//        navigationController?.navigationBar.barTintColor = .red
     }
     
     private func updateUI() {
@@ -115,14 +167,27 @@ class EventsController: TableNodeController {
         toolBar.addSubview(v)
         
         toolBar.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(toolBar)
         
+        let footerView = UIView()
+        footerView.backgroundColor = view.backgroundColor
+        footerView.frame = CGRect(x: 0, y: 100, width: 200, height: 200)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(toolBar)
+        view.addSubview(footerView)
+        
+        tableNode.contentInset.bottom = 44
         let guide = self.view.safeAreaLayoutGuide
         
         toolBar.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
         toolBar.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
         toolBar.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
         toolBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    
+        footerView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+        footerView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+        footerView.topAnchor.constraint(equalTo: toolBar.bottomAnchor).isActive = true
+        footerView.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
         v.centerYAnchor.constraint(equalTo: toolBar.centerYAnchor).isActive = true
         v.leftAnchor.constraint(equalTo: toolBar.leftAnchor, constant: 25).isActive = true
@@ -157,6 +222,18 @@ class EventsController: TableNodeController {
     private func removeEmptyView() {
         tableNode.view.backgroundView = nil
     }
+    
+    private func appReturnedFromBackground() -> Observable<Notification> {
+        return Observable.create( { observer in
+            let n = NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil) { notification in
+                observer.onNext(notification)
+            }
+            
+            return Disposables.create {
+                NotificationCenter.default.removeObserver(n)
+            }
+        })
+    }
         
     // MARK: - TableNode Delegate
     
@@ -167,12 +244,6 @@ class EventsController: TableNodeController {
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
         let c = content[indexPath.row]
         let node = EventPreviewNode()
-          
-//        Observable<Int>
-//            .interval(.seconds(1), scheduler: MainScheduler.instance)
-//            .subscribe({ _ in
-//
-//            }).disposed(by: disposeBag)
         
         let daysString = DateHelper.formatDateToPreviewString(c.date!)
         

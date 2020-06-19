@@ -27,7 +27,7 @@ class EventFullNode: ASDisplayNode {
         indicator.image = UIImage(named: "i_arrow_down")
         indicator.imageModificationBlock = ASImageNodeTintColorModificationBlock(.green)
     }
-    
+        
     func setNode(time: String, name: String, date: String) {
         timeNode.attributedText = time.setAttributes(
             withFont: UIFont(name: "OpenSans-SemiBold", size: 32)!, textColor: .white, aligment: .left
@@ -47,7 +47,7 @@ class EventFullNode: ASDisplayNode {
         
         let timeStack = ASStackLayoutSpec(
             direction: .horizontal, spacing: 2, justifyContent: .start, alignItems: .center,
-            children: [indicator, timeNode]
+            children: [timeNode]
         )
         
         let content = ASStackLayoutSpec(

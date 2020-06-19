@@ -7,20 +7,26 @@
 //
 
 import AsyncDisplayKit
-import Hero
+import RxSwift
+import RealmSwift
+import RxRealm
 
 class EventFullController: ASViewController<ASDisplayNode> {
     
     var event: EventModel?
     
     private let backgroundImage = ASImageNode()
+    private let statusBarShadow = ASImageNode()
+    private let elementsShadow = ASImageNode()
     private let elementsNode = EventFullNode()
+    
+    private let disposeBag = DisposeBag()
     
     init() {
         let n = ASDisplayNode()
         super.init(node: n)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -29,6 +35,9 @@ class EventFullController: ASViewController<ASDisplayNode> {
         super.viewDidLoad()
         
         updateUI()
+        updateContent()
+        
+        startUpdating()
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -42,6 +51,7 @@ class EventFullController: ASViewController<ASDisplayNode> {
         super.viewWillAppear(animated)
         
         animate()
+        updateContent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -75,9 +85,7 @@ class EventFullController: ASViewController<ASDisplayNode> {
             image: UIImage(named: "i_more_white"), style: .plain, target: self, action: #selector(moreActions)
         )
         
-        backgroundImage.image = UIImage(named: "2")
         backgroundImage.frame = view.frame
-        
         backgroundImage.contentMode = .scaleAspectFill
         backgroundImage.clipsToBounds = true
         
@@ -85,9 +93,37 @@ class EventFullController: ASViewController<ASDisplayNode> {
         let height = (screen.height / 2) * 0.5
         elementsNode.frame = CGRect(x: 0, y: screen.height - height, width: screen.width, height: height)
         
-        node.addSubnode(backgroundImage)
-        node.addSubnode(elementsNode)
+        statusBarShadow.frame = CGRect(x: 0, y: -5, width: screen.width, height: 140)
+        statusBarShadow.image = UIImage(named: "shadow")
+        statusBarShadow.contentMode = .scaleAspectFill
+        statusBarShadow.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         
-        elementsNode.setNode(time: "Today", name: event?.name ?? "", date: "String")
+        elementsShadow.frame = elementsNode.frame
+        elementsShadow.image = UIImage(named: "shadow_bottom")
+        elementsShadow.contentMode = .scaleAspectFill
+        
+        elementsNode.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeTimeStyle)))
+        
+        node.addSubnode(backgroundImage)
+        node.addSubnode(statusBarShadow)
+        node.addSubnode(elementsShadow)
+        node.addSubnode(elementsNode)
+    }
+    
+    func updateContent() {
+        backgroundImage.image = event?.image ?? UIImage(named: "2")
+        
+        let time = DateHelper.format(date: event?.date ?? Date(), style: event?.dateFormat ?? .days)
+        elementsNode.setNode(
+            time: time, name: event?.name ?? "",
+            date: DateHelper.formatDate(event?.date ?? Date(), format: "MMMM dd, YYYY / H:mm")
+        )
+    }
+    
+    private func startUpdating() {
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+        .subscribe({ _ in
+            self.updateContent()
+        }).disposed(by: disposeBag)
     }
 }

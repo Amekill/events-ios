@@ -15,14 +15,18 @@ class NewSaveButtonNode: TableCell {
     override func didLoad() {
         super.didLoad()
         
-        saveButtonNode.setTitle(
-            "Create Event", with: UIFont(name: "OpenSans-SemiBold", size: 17), with: .white, for: .normal
-        )
-        
         saveButtonNode.backgroundColor = Constants.accent_color
         saveButtonNode.contentEdgeInsets.left = 35
         saveButtonNode.contentEdgeInsets.right = 35
         saveButtonNode.cornerRadius = 22
+    }
+    
+    func setNode(title: String) {
+        saveButtonNode.setTitle(
+            title, with: UIFont(name: "OpenSans-SemiBold", size: 17), with: .white, for: .normal
+        )
+        
+        view.layoutIfNeeded()
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

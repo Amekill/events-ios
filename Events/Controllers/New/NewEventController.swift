@@ -43,7 +43,7 @@ class NewEventController: TableNodeController {
         // update row's content
         
         if let catNode = tableNode.nodeForRow(at: IndexPath(row: 1, section: 0)) as? NewSelectionNode {
-            catNode.setNode(title: "Category", subtitle: eventModel.category?.rawValue)
+            catNode.setNode(title: "Category", subtitle: eventModel.category?.title)
         }
         
         if let imageNode = tableNode.nodeForRow(at: IndexPath(row: 0, section: 1)) as? NewImageNode {
@@ -51,7 +51,7 @@ class NewEventController: TableNodeController {
         }
         
         if let notifNode = tableNode.nodeForRow(at: IndexPath(row: 0, section: 2)) as? NewSelectionNode {
-            notifNode.setNode(title: "Notifications", subtitle: eventModel.notifications?.rawValue)
+            notifNode.setNode(title: "Notifications", subtitle: eventModel.notifications?.title)
         }
     }
     
@@ -145,6 +145,7 @@ class NewEventController: TableNodeController {
         case .create:
             let node = NewSaveButtonNode()
             node.saveButtonNode.addTarget(self, action: #selector(createEvent), forControlEvents: .touchUpInside)
+            node.setNode(title: editorMode ? "Save" : "Create Event")
             
             return node
         }

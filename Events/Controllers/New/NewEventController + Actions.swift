@@ -145,7 +145,11 @@ extension NewEventController {
             return
         }
         
-        DataManager.shared.events.array.append(eventModel)
+        if editorMode {
+            RealmManager.shared.event.updateEvent(eventModel)
+        } else {
+            RealmManager.shared.event.saveEvent(eventModel)
+        }
         
         dismissController()
         notificationFeedbackGenerator.notificationOccurred(.success)
