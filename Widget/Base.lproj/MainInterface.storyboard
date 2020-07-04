@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Upcoming_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m2J-GK-kE7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="51" id="kcw-g2-uCt" customClass="WidgetCell" customModule="Upcoming_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kcw-g2-uCt" id="Odk-QI-KXS">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In 20 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTc-g9-uYA">
+                                                    <rect key="frame" x="16" y="26" width="264" height="20"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="awI-Kl-F0e">
+                                                    <rect key="frame" x="292" y="15.5" width="20" height="20"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="awI-Kl-F0e" secondAttribute="height" multiplier="1:1" id="Yyp-DK-PyE"/>
+                                                        <constraint firstAttribute="width" constant="20" id="lQl-Nb-gzm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-Hf-jzf">
+                                                    <rect key="frame" x="16" y="5" width="264" height="22"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="awI-Kl-F0e" firstAttribute="leading" secondItem="zTc-g9-uYA" secondAttribute="trailing" constant="12" id="08f-3E-bkP"/>
+                                                <constraint firstItem="awI-Kl-F0e" firstAttribute="centerY" secondItem="Odk-QI-KXS" secondAttribute="centerY" id="Ihh-Jh-s8Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="zTc-g9-uYA" secondAttribute="bottom" constant="5" id="Ku1-FI-7Lm"/>
+                                                <constraint firstAttribute="trailing" secondItem="awI-Kl-F0e" secondAttribute="trailing" constant="8" id="QNp-E8-Zbi"/>
+                                                <constraint firstItem="dIg-Hf-jzf" firstAttribute="top" secondItem="Odk-QI-KXS" secondAttribute="top" constant="5" id="aMa-0x-xmf"/>
+                                                <constraint firstItem="dIg-Hf-jzf" firstAttribute="leading" secondItem="Odk-QI-KXS" secondAttribute="leading" constant="16" id="dcV-gQ-lGg"/>
+                                                <constraint firstItem="zTc-g9-uYA" firstAttribute="leading" secondItem="Odk-QI-KXS" secondAttribute="leading" constant="16" id="det-Ad-RBo"/>
+                                                <constraint firstItem="awI-Kl-F0e" firstAttribute="leading" secondItem="dIg-Hf-jzf" secondAttribute="trailing" constant="12" id="vBC-Bf-vgp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="zTc-g9-uYA" id="1EJ-wW-ekF"/>
+                                            <outlet property="indicator" destination="awI-Kl-F0e" id="bxc-5Z-VdI"/>
+                                            <outlet property="title" destination="dIg-Hf-jzf" id="obG-6W-m7H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="m2J-GK-kE7" secondAttribute="bottom" id="Jfo-kj-DGh"/>
+                            <constraint firstItem="m2J-GK-kE7" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="QxM-vR-3bE"/>
+                            <constraint firstItem="m2J-GK-kE7" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="i9e-bt-WoY"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="m2J-GK-kE7" secondAttribute="trailing" id="tzV-2Y-M21"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="180"/>
+                    <connections>
+                        <outlet property="tableView" destination="m2J-GK-kE7" id="yNK-Ko-WaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="i_arrow_down" width="48" height="48"/>
+    </resources>
+</document>
