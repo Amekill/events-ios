@@ -19,22 +19,16 @@ enum SettingsContentType: String {
     case share = "Share Events"
     
     enum SortType: String {
-        case date = "Date"
-        case last = "Last"
+        case date
+        case last
+        
+        var title: String {
+            switch self {
+            case .date:
+                return "Date"
+            case .last:
+                return "Last"
+            }
+        }
     }
-    
-//    var image: String {
-//        switch self {
-//        case .sortBy:
-//            return "i_sort"
-//        case .appearance:
-//            return "i_appearance"
-//        case .backup:
-//            return "i_backup"
-//        case.about:
-//            return "i_info"
-//        case .pro:
-//            return "i_upgrade"
-//        }
-//    }
 }

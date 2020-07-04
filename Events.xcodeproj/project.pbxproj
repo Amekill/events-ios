@@ -28,11 +28,28 @@
 		8A5677A52493A8F2002828D5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A42493A8F2002828D5 /* SettingsController.swift */; };
 		8A5677A82493AA77002828D5 /* SettingsTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677A72493AA77002828D5 /* SettingsTextNode.swift */; };
 		8A5677AB2493AACD002828D5 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5677AA2493AACD002828D5 /* SettingsEnums.swift */; };
+		8A591954249FB00700C75AF6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A591953249FB00700C75AF6 /* NotificationManager.swift */; };
 		8A7E39C92492A8840057E1BD /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39C82492A8840057E1BD /* EventsController.swift */; };
 		8A7E39CC2492A8B70057E1BD /* TableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39CB2492A8B70057E1BD /* TableNodeController.swift */; };
 		8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */; };
 		8A7E39D3249379E20057E1BD /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D2249379E20057E1BD /* TableCell.swift */; };
 		8A7E39D524937BF70057E1BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D424937BF70057E1BD /* String.swift */; };
+		8AA320F924B0628900AC6E2C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2CC2496A1A8007066EE /* EventModel.swift */; };
+		8AA320FA24B0632C00AC6E2C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */; };
+		8AA320FB24B065CE00AC6E2C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */; };
+		8AA320FC24B065CE00AC6E2C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB7248C42280087BE3F /* OpenSans-Light.ttf */; };
+		8AA320FD24B065CE00AC6E2C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */; };
+		8AA320FE24B065CE00AC6E2C /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */; };
+		8AA320FF24B0667700AC6E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD200EA2486A0A40085B204 /* Assets.xcassets */; };
+		8AA3210124B0674C00AC6E2C /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3210024B0674C00AC6E2C /* WidgetCell.swift */; };
+		8AA3210224B067E600AC6E2C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAF2652496AD8300807174 /* DateHelper.swift */; };
+		8AA3210924B069D600AC6E2C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3210724B069D600AC6E2C /* Interface.storyboard */; };
+		8AA3210B24B069D800AC6E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3210A24B069D800AC6E2C /* Assets.xcassets */; };
+		8AA3211224B069D800AC6E2C /* Events Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AA3211124B069D800AC6E2C /* Events Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8AA3211724B069D800AC6E2C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3211624B069D800AC6E2C /* InterfaceController.swift */; };
+		8AA3211924B069D800AC6E2C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3211824B069D800AC6E2C /* ExtensionDelegate.swift */; };
+		8AA3211B24B069D900AC6E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3211A24B069D900AC6E2C /* Assets.xcassets */; };
+		8AA3211F24B069D900AC6E2C /* Events Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AA3210524B069D600AC6E2C /* Events Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */; };
 		8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */; };
 		8ABF0E76249AC0C50030B6A0 /* EventFullEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */; };
@@ -54,9 +71,80 @@
 		8ADDF2CD2496A1A8007066EE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2CC2496A1A8007066EE /* EventModel.swift */; };
 		8ADDF2CF2496A1FA007066EE /* NewImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2CE2496A1FA007066EE /* NewImageNode.swift */; };
 		8ADDF2D12496AA38007066EE /* NewEventController + ASEditableTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2D02496AA38007066EE /* NewEventController + ASEditableTextNode.swift */; };
+		8ADE875B24A0CF41001C2913 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC230E224A0CA36001E83C5 /* NotificationCenter.framework */; };
+		8ADE875E24A0CF41001C2913 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADE875D24A0CF41001C2913 /* TodayViewController.swift */; };
+		8ADE876124A0CF41001C2913 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADE875F24A0CF41001C2913 /* MainInterface.storyboard */; };
+		8ADE876524A0CF41001C2913 /* Upcoming Events.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ADE875A24A0CF41001C2913 /* Upcoming Events.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8ADE876E24A0D2D9001C2913 /* RLMEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADE876D24A0D2D9001C2913 /* RLMEventModel.swift */; };
+		8ADE877024A0D307001C2913 /* RLMEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADE876D24A0D2D9001C2913 /* RLMEventModel.swift */; };
+		8ADE877124A0D44E001C2913 /* NewEventEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2BF24968249007066EE /* NewEventEnums.swift */; };
+		8ADE877224A0D457001C2913 /* EventFullEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */; };
+		EB565697C9D587B540A48BC0 /* Pods_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CA12620B64E8AE46500397 /* Pods_Widget.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8AA3211324B069D800AC6E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AA3211024B069D800AC6E2C;
+			remoteInfo = "Events Watch Extension";
+		};
+		8AA3211D24B069D900AC6E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AA3210424B069D600AC6E2C;
+			remoteInfo = "Events Watch";
+		};
+		8ADE876324A0CF41001C2913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ADE875924A0CF41001C2913;
+			remoteInfo = Widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AA3212324B069D900AC6E2C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8AA3211224B069D800AC6E2C /* Events Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA3212724B069D900AC6E2C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8AA3211F24B069D900AC6E2C /* Events Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ADE876924A0CF41001C2913 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8ADE876524A0CF41001C2913 /* Upcoming Events.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		34CA12620B64E8AE46500397 /* Pods_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB7F06D019CA2922C38E60D /* Pods-Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widget.debug.xcconfig"; path = "Target Support Files/Pods-Widget/Pods-Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		6CA87DD812949F4B9EECC4E6 /* Pods-Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.debug.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0E626D24977A03003BDCF6 /* NewEventSelectCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventSelectCategoryController.swift; sourceTree = "<group>"; };
 		8A0E626F24977B87003BDCF6 /* NewBasicNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBasicNode.swift; sourceTree = "<group>"; };
@@ -78,17 +166,30 @@
 		8A5677A42493A8F2002828D5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		8A5677A72493AA77002828D5 /* SettingsTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextNode.swift; sourceTree = "<group>"; };
 		8A5677AA2493AACD002828D5 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
+		8A591953249FB00700C75AF6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8A591955249FB5D300C75AF6 /* Events.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Events.entitlements; sourceTree = "<group>"; };
 		8A7E39C82492A8840057E1BD /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		8A7E39CB2492A8B70057E1BD /* TableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNodeController.swift; sourceTree = "<group>"; };
 		8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewNode.swift; sourceTree = "<group>"; };
 		8A7E39D2249379E20057E1BD /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		8A7E39D424937BF70057E1BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8AA3210024B0674C00AC6E2C /* WidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
+		8AA3210524B069D600AC6E2C /* Events Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA3210824B069D600AC6E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8AA3210A24B069D800AC6E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AA3210C24B069D800AC6E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA3211124B069D800AC6E2C /* Events Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Events Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA3211624B069D800AC6E2C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8AA3211824B069D800AC6E2C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8AA3211A24B069D900AC6E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AA3211C24B069D900AC6E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventFullController + Actions.swift"; sourceTree = "<group>"; };
 		8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticHelper.swift; sourceTree = "<group>"; };
 		8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFullEnums.swift; sourceTree = "<group>"; };
 		8ABF0E78249B404B0030B6A0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		8ABF0E7D249BB1CF0030B6A0 /* RLMEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMEvent.swift; sourceTree = "<group>"; };
+		8AC230E224A0CA36001E83C5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8ACAF2652496AD8300807174 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8ACAF2672496AF1C00807174 /* NewEventController + Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + Actions.swift"; sourceTree = "<group>"; };
 		8AD200DE2486A0A20085B204 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,16 +207,39 @@
 		8ADDF2CC2496A1A8007066EE /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		8ADDF2CE2496A1FA007066EE /* NewImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageNode.swift; sourceTree = "<group>"; };
 		8ADDF2D02496AA38007066EE /* NewEventController + ASEditableTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEventController + ASEditableTextNode.swift"; sourceTree = "<group>"; };
+		8ADE875A24A0CF41001C2913 /* Upcoming Events.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Upcoming Events.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ADE875D24A0CF41001C2913 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8ADE876024A0CF41001C2913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8ADE876224A0CF41001C2913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ADE876A24A0D14B001C2913 /* Upcoming Events.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Upcoming Events.entitlements"; sourceTree = "<group>"; };
+		8ADE876D24A0D2D9001C2913 /* RLMEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMEventModel.swift; sourceTree = "<group>"; };
 		91E5AF010D1C8D66B2C89799 /* Pods_Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16BEB70173C8C2424887A17 /* Pods-Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.release.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.release.xcconfig"; sourceTree = "<group>"; };
+		F6524F56D6B8D151D034ED80 /* Pods-Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widget.release.xcconfig"; path = "Target Support Files/Pods-Widget/Pods-Widget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8AA3210E24B069D800AC6E2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD200DB2486A0A20085B204 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5B6C369C1A4EE1BB38440A90 /* Pods_Events.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ADE875724A0CF41001C2913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ADE875B24A0CF41001C2913 /* NotificationCenter.framework in Frameworks */,
+				EB565697C9D587B540A48BC0 /* Pods_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +251,8 @@
 			children = (
 				6CA87DD812949F4B9EECC4E6 /* Pods-Events.debug.xcconfig */,
 				F16BEB70173C8C2424887A17 /* Pods-Events.release.xcconfig */,
+				4BB7F06D019CA2922C38E60D /* Pods-Widget.debug.xcconfig */,
+				F6524F56D6B8D151D034ED80 /* Pods-Widget.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -134,20 +260,21 @@
 		8A0E627324979F6A003BDCF6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				8ABF0E77249B3FCF0030B6A0 /* RealmManager */,
-				8A39D8B82498CBF500E9FFD2 /* DefaultStorage */,
-				8A0E627424979F72003BDCF6 /* DataManager */,
+				8A591952249FAFEC00C75AF6 /* Notification Manager */,
+				8ABF0E77249B3FCF0030B6A0 /* Realm Manager */,
+				8A39D8B82498CBF500E9FFD2 /* Default Storage */,
+				8A0E627424979F72003BDCF6 /* Data Manager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		8A0E627424979F72003BDCF6 /* DataManager */ = {
+		8A0E627424979F72003BDCF6 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
 				8A0E627524979F7B003BDCF6 /* DataManager.swift */,
 				8A0E627724979F81003BDCF6 /* DataManagerObject.swift */,
 			);
-			path = DataManager;
+			path = "Data Manager";
 			sourceTree = "<group>";
 		};
 		8A0E627B249811E1003BDCF6 /* Image Picker */ = {
@@ -221,12 +348,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		8A39D8B82498CBF500E9FFD2 /* DefaultStorage */ = {
+		8A39D8B82498CBF500E9FFD2 /* Default Storage */ = {
 			isa = PBXGroup;
 			children = (
 				8A39D8BB2498CC1200E9FFD2 /* DefaultStorage.swift */,
 			);
-			path = DefaultStorage;
+			path = "Default Storage";
 			sourceTree = "<group>";
 		};
 		8A39D8C12499FD8F00E9FFD2 /* Event Full */ = {
@@ -261,6 +388,14 @@
 				8ABF0E6F249A7A630030B6A0 /* Full */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		8A591952249FAFEC00C75AF6 /* Notification Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A591953249FB00700C75AF6 /* NotificationManager.swift */,
+			);
+			path = "Notification Manager";
 			sourceTree = "<group>";
 		};
 		8A7E39CA2492A8B00057E1BD /* Base */ = {
@@ -299,6 +434,27 @@
 			path = "Base Table ";
 			sourceTree = "<group>";
 		};
+		8AA3210624B069D600AC6E2C /* Events Watch */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3210724B069D600AC6E2C /* Interface.storyboard */,
+				8AA3210A24B069D800AC6E2C /* Assets.xcassets */,
+				8AA3210C24B069D800AC6E2C /* Info.plist */,
+			);
+			path = "Events Watch";
+			sourceTree = "<group>";
+		};
+		8AA3211524B069D800AC6E2C /* Events Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3211624B069D800AC6E2C /* InterfaceController.swift */,
+				8AA3211824B069D800AC6E2C /* ExtensionDelegate.swift */,
+				8AA3211A24B069D900AC6E2C /* Assets.xcassets */,
+				8AA3211C24B069D900AC6E2C /* Info.plist */,
+			);
+			path = "Events Watch Extension";
+			sourceTree = "<group>";
+		};
 		8ABF0E6F249A7A630030B6A0 /* Full */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,13 +465,13 @@
 			path = Full;
 			sourceTree = "<group>";
 		};
-		8ABF0E77249B3FCF0030B6A0 /* RealmManager */ = {
+		8ABF0E77249B3FCF0030B6A0 /* Realm Manager */ = {
 			isa = PBXGroup;
 			children = (
 				8ABF0E78249B404B0030B6A0 /* RealmManager.swift */,
 				8ABF0E7C249BB1CA0030B6A0 /* Objects */,
 			);
-			path = RealmManager;
+			path = "Realm Manager";
 			sourceTree = "<group>";
 		};
 		8ABF0E7C249BB1CA0030B6A0 /* Objects */ = {
@@ -330,6 +486,9 @@
 			isa = PBXGroup;
 			children = (
 				8AD200E02486A0A20085B204 /* Events */,
+				8ADE875C24A0CF41001C2913 /* Widget */,
+				8AA3210624B069D600AC6E2C /* Events Watch */,
+				8AA3211524B069D800AC6E2C /* Events Watch Extension */,
 				8AD200DF2486A0A20085B204 /* Products */,
 				7F0B3EA34C66CC1E155FA574 /* Pods */,
 				BD4713E9D34F3F3B2B8376D2 /* Frameworks */,
@@ -340,6 +499,9 @@
 			isa = PBXGroup;
 			children = (
 				8AD200DE2486A0A20085B204 /* Events.app */,
+				8ADE875A24A0CF41001C2913 /* Upcoming Events.appex */,
+				8AA3210524B069D600AC6E2C /* Events Watch.app */,
+				8AA3211124B069D800AC6E2C /* Events Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +509,7 @@
 		8AD200E02486A0A20085B204 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				8A591955249FB5D300C75AF6 /* Events.entitlements */,
 				8AD200E12486A0A20085B204 /* AppDelegate.swift */,
 				8AD200E32486A0A20085B204 /* SceneDelegate.swift */,
 				8AD200EF2486A0A40085B204 /* Info.plist */,
@@ -390,15 +553,30 @@
 			isa = PBXGroup;
 			children = (
 				8ADDF2CC2496A1A8007066EE /* EventModel.swift */,
+				8ADE876D24A0D2D9001C2913 /* RLMEventModel.swift */,
 				8A39D8B62498C94100E9FFD2 /* SettingsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8ADE875C24A0CF41001C2913 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				8ADE876A24A0D14B001C2913 /* Upcoming Events.entitlements */,
+				8AA3210024B0674C00AC6E2C /* WidgetCell.swift */,
+				8ADE875D24A0CF41001C2913 /* TodayViewController.swift */,
+				8ADE875F24A0CF41001C2913 /* MainInterface.storyboard */,
+				8ADE876224A0CF41001C2913 /* Info.plist */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		BD4713E9D34F3F3B2B8376D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				91E5AF010D1C8D66B2C89799 /* Pods_Events.framework */,
+				8AC230E224A0CA36001E83C5 /* NotificationCenter.framework */,
+				34CA12620B64E8AE46500397 /* Pods_Widget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -406,6 +584,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8AA3210424B069D600AC6E2C /* Events Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA3212424B069D900AC6E2C /* Build configuration list for PBXNativeTarget "Events Watch" */;
+			buildPhases = (
+				8AA3210324B069D600AC6E2C /* Resources */,
+				8AA3212324B069D900AC6E2C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AA3211424B069D800AC6E2C /* PBXTargetDependency */,
+			);
+			name = "Events Watch";
+			productName = "Events Watch";
+			productReference = 8AA3210524B069D600AC6E2C /* Events Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8AA3211024B069D800AC6E2C /* Events Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA3212024B069D900AC6E2C /* Build configuration list for PBXNativeTarget "Events Watch Extension" */;
+			buildPhases = (
+				8AA3210D24B069D800AC6E2C /* Sources */,
+				8AA3210E24B069D800AC6E2C /* Frameworks */,
+				8AA3210F24B069D800AC6E2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Events Watch Extension";
+			productName = "Events Watch Extension";
+			productReference = 8AA3211124B069D800AC6E2C /* Events Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		8AD200DD2486A0A20085B204 /* Events */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AD200F22486A0A40085B204 /* Build configuration list for PBXNativeTarget "Events" */;
@@ -415,15 +627,37 @@
 				8AD200DB2486A0A20085B204 /* Frameworks */,
 				8AD200DC2486A0A20085B204 /* Resources */,
 				CE5BF8483AACE0532960A33B /* [CP] Embed Pods Frameworks */,
+				8ADE876924A0CF41001C2913 /* Embed App Extensions */,
+				8AA3212724B069D900AC6E2C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8ADE876424A0CF41001C2913 /* PBXTargetDependency */,
+				8AA3211E24B069D900AC6E2C /* PBXTargetDependency */,
 			);
 			name = Events;
 			productName = Events;
 			productReference = 8AD200DE2486A0A20085B204 /* Events.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8ADE875924A0CF41001C2913 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ADE876624A0CF41001C2913 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				6BF829BEFBE6411BCCAE6ADE /* [CP] Check Pods Manifest.lock */,
+				8ADE875624A0CF41001C2913 /* Sources */,
+				8ADE875724A0CF41001C2913 /* Frameworks */,
+				8ADE875824A0CF41001C2913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = 8ADE875A24A0CF41001C2913 /* Upcoming Events.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -435,7 +669,16 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Alexey Kostenko";
 				TargetAttributes = {
+					8AA3210424B069D600AC6E2C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8AA3211024B069D800AC6E2C = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					8AD200DD2486A0A20085B204 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8ADE875924A0CF41001C2913 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -454,11 +697,31 @@
 			projectRoot = "";
 			targets = (
 				8AD200DD2486A0A20085B204 /* Events */,
+				8ADE875924A0CF41001C2913 /* Widget */,
+				8AA3210424B069D600AC6E2C /* Events Watch */,
+				8AA3211024B069D800AC6E2C /* Events Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8AA3210324B069D600AC6E2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA3210B24B069D800AC6E2C /* Assets.xcassets in Resources */,
+				8AA3210924B069D600AC6E2C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA3210F24B069D800AC6E2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA3211B24B069D900AC6E2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD200DC2486A0A20085B204 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +732,19 @@
 				8AD200EB2486A0A40085B204 /* Assets.xcassets in Resources */,
 				8A2A3EBB248C42290087BE3F /* OpenSans-Light.ttf in Resources */,
 				8A2A3EBC248C42290087BE3F /* OpenSans-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ADE875824A0CF41001C2913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA320FC24B065CE00AC6E2C /* OpenSans-Light.ttf in Resources */,
+				8AA320FB24B065CE00AC6E2C /* OpenSans-Bold.ttf in Resources */,
+				8AA320FE24B065CE00AC6E2C /* OpenSans-SemiBold.ttf in Resources */,
+				8AA320FD24B065CE00AC6E2C /* OpenSans-Regular.ttf in Resources */,
+				8AA320FF24B0667700AC6E2C /* Assets.xcassets in Resources */,
+				8ADE876124A0CF41001C2913 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +773,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6BF829BEFBE6411BCCAE6ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE5BF8483AACE0532960A33B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +815,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8AA3210D24B069D800AC6E2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA3211924B069D800AC6E2C /* ExtensionDelegate.swift in Sources */,
+				8AA3211724B069D800AC6E2C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD200DA2486A0A20085B204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +840,7 @@
 				8A0E626E24977A03003BDCF6 /* NewEventSelectCategoryController.swift in Sources */,
 				8A0E627224979B44003BDCF6 /* NewEventNotificationsController.swift in Sources */,
 				8ACAF2682496AF1C00807174 /* NewEventController + Actions.swift in Sources */,
+				8ADE876E24A0D2D9001C2913 /* RLMEventModel.swift in Sources */,
 				8ABF0E79249B404B0030B6A0 /* RealmManager.swift in Sources */,
 				8A39D8BC2498CC1200E9FFD2 /* DefaultStorage.swift in Sources */,
 				8ABF0E7E249BB1CF0030B6A0 /* RLMEvent.swift in Sources */,
@@ -541,6 +849,7 @@
 				8ADDF2D12496AA38007066EE /* NewEventController + ASEditableTextNode.swift in Sources */,
 				8A0E627024977B87003BDCF6 /* NewBasicNode.swift in Sources */,
 				8A39D8C02499615100E9FFD2 /* EventFullController.swift in Sources */,
+				8A591954249FB00700C75AF6 /* NotificationManager.swift in Sources */,
 				8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */,
 				8A39D8B72498C94100E9FFD2 /* SettingsModel.swift in Sources */,
 				8ADDF2C8249685D6007066EE /* NewTextFiledNode.swift in Sources */,
@@ -564,9 +873,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8ADE875624A0CF41001C2913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ADE877224A0D457001C2913 /* EventFullEnums.swift in Sources */,
+				8AA3210224B067E600AC6E2C /* DateHelper.swift in Sources */,
+				8ADE877124A0D44E001C2913 /* NewEventEnums.swift in Sources */,
+				8ADE877024A0D307001C2913 /* RLMEventModel.swift in Sources */,
+				8AA320F924B0628900AC6E2C /* EventModel.swift in Sources */,
+				8AA3210124B0674C00AC6E2C /* WidgetCell.swift in Sources */,
+				8ADE875E24A0CF41001C2913 /* TodayViewController.swift in Sources */,
+				8AA320FA24B0632C00AC6E2C /* ImageHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8AA3211424B069D800AC6E2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AA3211024B069D800AC6E2C /* Events Watch Extension */;
+			targetProxy = 8AA3211324B069D800AC6E2C /* PBXContainerItemProxy */;
+		};
+		8AA3211E24B069D900AC6E2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AA3210424B069D600AC6E2C /* Events Watch */;
+			targetProxy = 8AA3211D24B069D900AC6E2C /* PBXContainerItemProxy */;
+		};
+		8ADE876424A0CF41001C2913 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8ADE875924A0CF41001C2913 /* Widget */;
+			targetProxy = 8ADE876324A0CF41001C2913 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		8AA3210724B069D600AC6E2C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA3210824B069D600AC6E2C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		8AD200EC2486A0A40085B204 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -575,9 +925,99 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		8ADE875F24A0CF41001C2913 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ADE876024A0CF41001C2913 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8AA3212124B069D900AC6E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				INFOPLIST_FILE = "Events Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		8AA3212224B069D900AC6E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				INFOPLIST_FILE = "Events Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		8AA3212524B069D900AC6E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				IBSC_MODULE = Events_Watch_Extension;
+				INFOPLIST_FILE = "Events Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		8AA3212624B069D900AC6E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				IBSC_MODULE = Events_Watch_Extension;
+				INFOPLIST_FILE = "Events Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 		8AD200F02486A0A40085B204 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -696,10 +1136,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CA87DD812949F4B9EECC4E6 /* Pods-Events.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Events/Events.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				INFOPLIST_FILE = Events/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -715,10 +1158,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F16BEB70173C8C2424887A17 /* Pods-Events.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Events/Events.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				INFOPLIST_FILE = Events/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -730,9 +1176,75 @@
 			};
 			name = Release;
 		};
+		8ADE876724A0CF41001C2913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB7F06D019CA2922C38E60D /* Pods-Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Widget/Upcoming Events.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.Widget;
+				PRODUCT_NAME = "Upcoming Events";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8ADE876824A0CF41001C2913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6524F56D6B8D151D034ED80 /* Pods-Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Widget/Upcoming Events.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL9QL5822S;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.widget;
+				PRODUCT_NAME = "Upcoming Events";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8AA3212024B069D900AC6E2C /* Build configuration list for PBXNativeTarget "Events Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA3212124B069D900AC6E2C /* Debug */,
+				8AA3212224B069D900AC6E2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA3212424B069D900AC6E2C /* Build configuration list for PBXNativeTarget "Events Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA3212524B069D900AC6E2C /* Debug */,
+				8AA3212624B069D900AC6E2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8AD200D92486A0A20085B204 /* Build configuration list for PBXProject "Events" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -747,6 +1259,15 @@
 			buildConfigurations = (
 				8AD200F32486A0A40085B204 /* Debug */,
 				8AD200F42486A0A40085B204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ADE876624A0CF41001C2913 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ADE876724A0CF41001C2913 /* Debug */,
+				8ADE876824A0CF41001C2913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

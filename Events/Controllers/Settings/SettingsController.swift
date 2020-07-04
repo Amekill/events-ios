@@ -8,6 +8,8 @@
 
 import AsyncDisplayKit
 import SPLarkController
+import RxSwift
+import RxCocoa
 
 class SettingsController: SPLarkSettingsController {
     
@@ -41,7 +43,7 @@ class SettingsController: SPLarkSettingsController {
         let c = content[index]
         switch c {
         case .sortBy:
-            return settingsModel.sortedBy.rawValue
+            return settingsModel.sortedBy.title
         default:
             return nil
         }
@@ -59,6 +61,8 @@ class SettingsController: SPLarkSettingsController {
                 DefaultStorage.shared.save(data: "date", forKey: .sortedBy)
                 settingsModel.sortedBy = .date
             }
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "N_SORTING_CHANGED"), object: nil)
         default:
             break
         }

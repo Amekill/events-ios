@@ -147,9 +147,12 @@ extension NewEventController {
         
         if editorMode {
             RealmManager.shared.event.updateEvent(eventModel)
+            NotificationManager.delete(eventId: "\(eventModel.id ?? 0)")
         } else {
             RealmManager.shared.event.saveEvent(eventModel)
         }
+        
+        NotificationManager.add(event: eventModel)
         
         dismissController()
         notificationFeedbackGenerator.notificationOccurred(.success)

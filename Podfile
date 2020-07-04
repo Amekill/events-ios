@@ -15,3 +15,10 @@ target 'Events' do
     pod 'Firebase/Analytics'
 
 end
+
+target 'Widget' do
+  use_frameworks!
+
+    pod "RxRealm"
+
+end

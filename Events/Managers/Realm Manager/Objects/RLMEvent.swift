@@ -19,8 +19,17 @@ class RLMEvent {
         return (realm.objects(RLMEventModel.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
     
+    private func getRealmObject() -> Realm {
+        let fileURL = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.events.database")!
+            .appendingPathComponent("default.realm")
+        let config = Realm.Configuration(fileURL: fileURL)
+        
+        return try! Realm(configuration: config)
+    }
+    
     func saveEvent(_ event: EventModel) {
-        let realm = try! Realm()
+        let realm = getRealmObject()
         let id = incrementID()
         let model = RLMEventModel(
             id: id,
@@ -44,7 +53,7 @@ class RLMEvent {
     }
     
     func deleteEvent(withId id: Int) {
-        let realm = try! Realm()
+        let realm = getRealmObject()
         let event = realm.objects(RLMEventModel.self).filter("id = \(id)")
         
         Observable.collection(from: event)
@@ -54,10 +63,18 @@ class RLMEvent {
         ImageHelper.deleteImageFromDocumentDirectory(fileName: "\(id)")
     }
     
-    func getEvents(onSuccess: @escaping ([RLMEventModel]) -> Void) -> Observable<([Results<RLMEventModel>.ElementType], RealmChangeset)> {
+    func getEvents(sortBy: SettingsContentType.SortType, onSuccess: @escaping ([RLMEventModel]) -> Void) -> Observable<([Results<RLMEventModel>.ElementType], RealmChangeset)> {
         return Observable.create { observer in
-            let realm = try! Realm()
-            let events = realm.objects(RLMEventModel.self)
+            let realm = self.getRealmObject()
+            
+            var events: Results<RLMEventModel> {
+                switch sortBy {
+                case .date:
+                    return realm.objects(RLMEventModel.self).sorted(byKeyPath: "date", ascending: false)
+                case .last:
+                    return realm.objects(RLMEventModel.self).sorted(byKeyPath: "id", ascending: false)
+                }
+            }
             
             Observable.arrayWithChangeset(from: events)
                 .subscribe(onNext: { array, changes in
@@ -74,7 +91,7 @@ class RLMEvent {
     }
     
     func updateEvent(_ event: EventModel) {
-        let realm = try! Realm()
+        let realm = getRealmObject()
         let id = "\(event.id ?? 0)"
         
         let model = RLMEventModel(

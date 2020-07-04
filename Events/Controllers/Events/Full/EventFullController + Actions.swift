@@ -55,6 +55,7 @@ extension EventFullController {
     
     private func deleteEvent() {
         RealmManager.shared.event.deleteEvent(withId: event?.id ?? 0)
+        NotificationManager.delete(eventId: "\(event?.id ?? 0)")
         navigationController?.popToRootViewController(animated: true)
     }
     

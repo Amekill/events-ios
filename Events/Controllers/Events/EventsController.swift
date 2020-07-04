@@ -24,7 +24,10 @@ class EventsController: TableNodeController {
     private func loadEvents() -> Disposable {
         eventsObject?.dispose()
         
-        return RealmManager.shared.event.getEvents { events in
+        let s = DefaultStorage.shared.get(forKey: .sortedBy)
+        let type = SettingsContentType.SortType(rawValue: s ?? "") ?? .date
+        
+        return RealmManager.shared.event.getEvents(sortBy: type) { events in
             self.content.removeAll(keepingCapacity: true)
             
             for e in events {
@@ -66,6 +69,7 @@ class EventsController: TableNodeController {
         .disposed(by: disposeBag)
         
         eventsObject = loadEvents()
+        subscribeToSortUpdating()
     }
     
     private func rlmToLocal(_ e: RLMEventModel) -> EventModel {
@@ -233,6 +237,26 @@ class EventsController: TableNodeController {
                 NotificationCenter.default.removeObserver(n)
             }
         })
+    }
+    
+    private func sortingDidChanged() -> Observable<Void> {
+        return Observable.create( { observer in
+            let n = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "N_SORTING_CHANGED"), object: nil, queue: nil) { _ in
+                observer.onNext(())
+            }
+            
+            return Disposables.create {
+                NotificationCenter.default.removeObserver(n)
+            }
+        })
+    }
+    
+    private func subscribeToSortUpdating() {
+        sortingDidChanged()
+            .subscribe(onNext: {
+                self.eventsObject = self.loadEvents()
+            })
+        .disposed(by: disposeBag)
     }
         
     // MARK: - TableNode Delegate
