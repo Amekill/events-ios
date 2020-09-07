@@ -58,7 +58,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.6.0):
     - GoogleUtilities/Logger
-  - Hero (1.5.0)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -80,11 +79,11 @@ PODS:
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
   - PromisesObjC (1.2.9)
-  - Realm (5.0.3):
-    - Realm/Headers (= 5.0.3)
-  - Realm/Headers (5.0.3)
-  - RealmSwift (5.0.3):
-    - Realm (= 5.0.3)
+  - Realm (5.2.0):
+    - Realm/Headers (= 5.2.0)
+  - Realm/Headers (5.2.0)
+  - RealmSwift (5.2.0):
+    - Realm (= 5.2.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -122,7 +121,6 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
-  - Hero
   - RxCocoa (~> 5)
   - RxCocoa-Texture
   - RxRealm
@@ -140,7 +138,6 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
-    - Hero
     - nanopb
     - PINCache
     - PINOperation
@@ -166,14 +163,13 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
-  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
-  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
-  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
+  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
+  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxCocoa-Texture: 90abb54f5d153746fe414f4d04e6d2e6cf91d70e
   RxRealm: af7a3c857efd5a711c176f6df0d67418ad48293b
@@ -182,6 +178,6 @@ SPEC CHECKSUMS:
   SPLarkController: 36a5db07b4609f808c8d520fc30c56ecdaa25c73
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: 905e90c759e353f0fd49e61d7ea8fd517f139c79
+PODFILE CHECKSUM: d31fc317b8989c0f427edfe2f2b1b8300d1d3cd9
 
 COCOAPODS: 1.9.3

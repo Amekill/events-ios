@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>by.alexeykostenko.events.nondev</string>
+	<string>su.creatives.events.nondev</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

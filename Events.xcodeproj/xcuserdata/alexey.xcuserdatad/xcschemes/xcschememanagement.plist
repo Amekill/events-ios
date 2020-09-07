@@ -6,8 +6,10 @@
 	<dict>
 		<key>Events Watch.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>26</integer>
 		</dict>
 		<key>Events.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,12 +24,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8AA3210424B069D600AC6E2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8AC230E024A0CA36001E83C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8AD200DD2486A0A20085B204</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8ADE875924A0CF41001C2913</key>
 		<dict>
 			<key>primary</key>
 			<true/>

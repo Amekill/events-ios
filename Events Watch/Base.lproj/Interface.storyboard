@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17132" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17031"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -13,15 +22,43 @@
                     <items>
                         <table alignment="left" id="vWE-ra-bUE">
                             <items>
-                                <tableRow id="62d-ZY-M1Q">
-                                    <group key="rootItem" width="1" alignment="left" id="xbd-TV-PlD"/>
+                                <tableRow identifier="EventRowController" id="62d-ZY-M1Q" customClass="EventRowController" customModule="Events_Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="xbd-TV-PlD">
+                                        <items>
+                                            <group width="1" alignment="left" spacing="5" id="ZVB-FE-csf">
+                                                <items>
+                                                    <label alignment="left" text="Label" textAlignment="left" baselineAdjustment="alignCenters" id="iS2-QN-mNi">
+                                                        <fontDescription key="font" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                                    </label>
+                                                    <imageView width="20" height="20" alignment="right" image="i_arrow_down" id="UyT-K8-660">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                </items>
+                                            </group>
+                                            <label width="1" alignment="left" text="In 20 days" id="aWs-nX-3Ez">
+                                                <fontDescription key="font" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="6" right="6" top="4" bottom="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="date" destination="aWs-nX-3Ez" id="RZf-qo-sCU"/>
+                                        <outlet property="indicator" destination="UyT-K8-660" id="znF-50-xMJ"/>
+                                        <outlet property="name" destination="iS2-QN-mNi" id="7Jh-JG-w49"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="vWE-ra-bUE" id="uzu-Lg-SXx"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="31"/>
+            <point key="canvasLocation" x="34" y="30.357142857142858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="i_arrow_down" width="48" height="48"/>
+    </resources>
 </document>

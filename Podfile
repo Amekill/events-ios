@@ -5,7 +5,6 @@ target 'Events' do
   inhibit_all_warnings!
 
     pod 'SPLarkController'
-    pod 'Hero'
 
     pod 'RxCocoa-Texture'
     pod 'RxSwift', '~> 5'

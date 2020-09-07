@@ -26,11 +26,15 @@ class NewSaveButtonNode: TableCell {
             title, with: UIFont(name: "OpenSans-SemiBold", size: 17), with: .white, for: .normal
         )
         
+        saveButtonNode.shadowColor = UIColor.black.cgColor
+        saveButtonNode.shadowOffset = .zero
+        saveButtonNode.shadowRadius = 2
+        saveButtonNode.shadowOpacity = 0.5
+        
         view.layoutIfNeeded()
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-//        saveButtonNode.style.preferredSize = CGSize(width: 150, height: 44)
         saveButtonNode.style.height = ASDimension(unit: .points, value: 44)
         
         let button = ASStackLayoutSpec(

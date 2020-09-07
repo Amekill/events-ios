@@ -40,7 +40,7 @@ class EventPreviewNode: TableCell {
     
     func setNode(name: String, days: String, bg: UIImage?) {
         image.backgroundColor = .white
-        image.image = bg ?? UIImage(named: "2")
+        image.image = bg ?? UIImage(named: "placeholder")
         
         titleNode.attributedText = name.setAttributes(
             withFont: UIFont(name: "OpenSans-Semibold", size: 20)!, textColor: .white, aligment: .left

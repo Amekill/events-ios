@@ -180,13 +180,13 @@ class EventsController: TableNodeController {
         view.addSubview(toolBar)
         view.addSubview(footerView)
         
-        tableNode.contentInset.bottom = 44
+        tableNode.contentInset.bottom = 50
         let guide = self.view.safeAreaLayoutGuide
         
         toolBar.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
         toolBar.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
         toolBar.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
-        toolBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        toolBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
     
         footerView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
         footerView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
@@ -194,8 +194,8 @@ class EventsController: TableNodeController {
         footerView.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
         v.centerYAnchor.constraint(equalTo: toolBar.centerYAnchor).isActive = true
-        v.leftAnchor.constraint(equalTo: toolBar.leftAnchor, constant: 25).isActive = true
-        v.rightAnchor.constraint(equalTo: toolBar.rightAnchor, constant: -25).isActive = true
+        v.leftAnchor.constraint(equalTo: toolBar.leftAnchor, constant: 18).isActive = true
+        v.rightAnchor.constraint(equalTo: toolBar.rightAnchor, constant: -18).isActive = true
         
         tableNode.view.separatorStyle = .none
     }
@@ -221,10 +221,12 @@ class EventsController: TableNodeController {
         titleLabel.text = "No Events"
 
         tableNode.view.backgroundView = emptyView
+        tableNode.view.isScrollEnabled = false
     }
     
     private func removeEmptyView() {
         tableNode.view.backgroundView = nil
+        tableNode.view.isScrollEnabled = true
     }
     
     private func appReturnedFromBackground() -> Observable<Notification> {

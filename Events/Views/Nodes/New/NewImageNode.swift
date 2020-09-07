@@ -37,7 +37,7 @@ class NewImageNode: TableCell {
         if let image = image {
             imagePreview.image = image
         } else {
-            imagePreview.image = UIImage(named: "2")
+            imagePreview.image = UIImage(named: "placeholder")
         }
         
         titleNode.attributedText = title.setAttributes(

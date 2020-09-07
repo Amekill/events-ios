@@ -34,6 +34,7 @@
 		8A7E39D0249379C00057E1BD /* EventPreviewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */; };
 		8A7E39D3249379E20057E1BD /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D2249379E20057E1BD /* TableCell.swift */; };
 		8A7E39D524937BF70057E1BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E39D424937BF70057E1BD /* String.swift */; };
+		8A95560F24B0BED0001307C4 /* EventRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95560E24B0BED0001307C4 /* EventRowController.swift */; };
 		8AA320F924B0628900AC6E2C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADDF2CC2496A1A8007066EE /* EventModel.swift */; };
 		8AA320FA24B0632C00AC6E2C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E7A249BA5800030B6A0 /* ImageHelper.swift */; };
 		8AA320FB24B065CE00AC6E2C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */; };
@@ -50,6 +51,14 @@
 		8AA3211924B069D800AC6E2C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3211824B069D800AC6E2C /* ExtensionDelegate.swift */; };
 		8AA3211B24B069D900AC6E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3211A24B069D900AC6E2C /* Assets.xcassets */; };
 		8AA3211F24B069D900AC6E2C /* Events Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AA3210524B069D600AC6E2C /* Events Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8AA3212A24B06DDB00AC6E2C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */; };
+		8AA3212B24B06DDB00AC6E2C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB7248C42280087BE3F /* OpenSans-Light.ttf */; };
+		8AA3212C24B06DDB00AC6E2C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */; };
+		8AA3212D24B06DDB00AC6E2C /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */; };
+		8AA3212E24B06DDC00AC6E2C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB9248C42290087BE3F /* OpenSans-Bold.ttf */; };
+		8AA3212F24B06DDC00AC6E2C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB7248C42280087BE3F /* OpenSans-Light.ttf */; };
+		8AA3213024B06DDC00AC6E2C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB8248C42290087BE3F /* OpenSans-Regular.ttf */; };
+		8AA3213124B06DDC00AC6E2C /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3EB6248C42280087BE3F /* OpenSans-SemiBold.ttf */; };
 		8ABF0E6E249A7A5F0030B6A0 /* EventFullController + Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E6D249A7A5F0030B6A0 /* EventFullController + Actions.swift */; };
 		8ABF0E71249A7B640030B6A0 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E70249A7B640030B6A0 /* TapticHelper.swift */; };
 		8ABF0E76249AC0C50030B6A0 /* EventFullEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0E75249AC0C50030B6A0 /* EventFullEnums.swift */; };
@@ -83,19 +92,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8A3F0A4F2506842F009FC07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AA3210424B069D600AC6E2C;
+			remoteInfo = "Events Watch";
+		};
 		8AA3211324B069D800AC6E2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8AA3211024B069D800AC6E2C;
 			remoteInfo = "Events Watch Extension";
-		};
-		8AA3211D24B069D900AC6E2C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AD200D62486A0A20085B204 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AA3210424B069D600AC6E2C;
-			remoteInfo = "Events Watch";
 		};
 		8ADE876324A0CF41001C2913 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -173,6 +182,7 @@
 		8A7E39CF249379C00057E1BD /* EventPreviewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewNode.swift; sourceTree = "<group>"; };
 		8A7E39D2249379E20057E1BD /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		8A7E39D424937BF70057E1BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8A95560E24B0BED0001307C4 /* EventRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowController.swift; sourceTree = "<group>"; };
 		8AA3210024B0674C00AC6E2C /* WidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
 		8AA3210524B069D600AC6E2C /* Events Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA3210824B069D600AC6E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -219,6 +229,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2155E462DD7EB9DA4136D0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AA3210E24B069D800AC6E2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +464,7 @@
 		8AA3211524B069D800AC6E2C /* Events Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8A95560E24B0BED0001307C4 /* EventRowController.swift */,
 				8AA3211624B069D800AC6E2C /* InterfaceController.swift */,
 				8AA3211824B069D800AC6E2C /* ExtensionDelegate.swift */,
 				8AA3211A24B069D900AC6E2C /* Assets.xcassets */,
@@ -590,6 +608,7 @@
 			buildPhases = (
 				8AA3210324B069D600AC6E2C /* Resources */,
 				8AA3212324B069D900AC6E2C /* Embed App Extensions */,
+				2155E462DD7EB9DA4136D0C3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -634,7 +653,7 @@
 			);
 			dependencies = (
 				8ADE876424A0CF41001C2913 /* PBXTargetDependency */,
-				8AA3211E24B069D900AC6E2C /* PBXTargetDependency */,
+				8A3F0A502506842F009FC07D /* PBXTargetDependency */,
 			);
 			name = Events;
 			productName = Events;
@@ -666,7 +685,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alexey Kostenko";
 				TargetAttributes = {
 					8AA3210424B069D600AC6E2C = {
@@ -709,8 +728,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA3212C24B06DDB00AC6E2C /* OpenSans-Regular.ttf in Resources */,
 				8AA3210B24B069D800AC6E2C /* Assets.xcassets in Resources */,
 				8AA3210924B069D600AC6E2C /* Interface.storyboard in Resources */,
+				8AA3212B24B06DDB00AC6E2C /* OpenSans-Light.ttf in Resources */,
+				8AA3212D24B06DDB00AC6E2C /* OpenSans-SemiBold.ttf in Resources */,
+				8AA3212A24B06DDB00AC6E2C /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +741,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA3212F24B06DDC00AC6E2C /* OpenSans-Light.ttf in Resources */,
+				8AA3212E24B06DDC00AC6E2C /* OpenSans-Bold.ttf in Resources */,
+				8AA3213124B06DDC00AC6E2C /* OpenSans-SemiBold.ttf in Resources */,
+				8AA3213024B06DDC00AC6E2C /* OpenSans-Regular.ttf in Resources */,
 				8AA3211B24B069D900AC6E2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +848,7 @@
 			files = (
 				8AA3211924B069D800AC6E2C /* ExtensionDelegate.swift in Sources */,
 				8AA3211724B069D800AC6E2C /* InterfaceController.swift in Sources */,
+				8A95560F24B0BED0001307C4 /* EventRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,15 +919,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8A3F0A502506842F009FC07D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AA3210424B069D600AC6E2C /* Events Watch */;
+			targetProxy = 8A3F0A4F2506842F009FC07D /* PBXContainerItemProxy */;
+		};
 		8AA3211424B069D800AC6E2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AA3211024B069D800AC6E2C /* Events Watch Extension */;
 			targetProxy = 8AA3211324B069D800AC6E2C /* PBXContainerItemProxy */;
-		};
-		8AA3211E24B069D900AC6E2C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AA3210424B069D600AC6E2C /* Events Watch */;
-			targetProxy = 8AA3211D24B069D900AC6E2C /* PBXContainerItemProxy */;
 		};
 		8ADE876424A0CF41001C2913 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -948,13 +976,13 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -970,13 +998,13 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -989,13 +1017,13 @@
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				IBSC_MODULE = Events_Watch_Extension;
 				INFOPLIST_FILE = "Events Watch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -1008,13 +1036,13 @@
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				IBSC_MODULE = Events_Watch_Extension;
 				INFOPLIST_FILE = "Events Watch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -1044,6 +1072,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1104,6 +1133,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1147,7 +1177,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1169,7 +1199,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1185,13 +1215,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				INFOPLIST_FILE = Widget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.widget;
 				PRODUCT_NAME = "Upcoming Events";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1209,13 +1239,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9QL5822S;
 				INFOPLIST_FILE = Widget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.alexeykostenko.events.nondev.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = su.creatives.events.nondev.widget;
 				PRODUCT_NAME = "Upcoming Events";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

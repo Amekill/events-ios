@@ -111,7 +111,7 @@ class EventFullController: ASViewController<ASDisplayNode> {
     }
     
     func updateContent() {
-        backgroundImage.image = event?.image ?? UIImage(named: "2")
+        backgroundImage.image = event?.image ?? UIImage(named: "placeholder")
         
         let time = DateHelper.format(date: event?.date ?? Date(), style: event?.dateFormat ?? .days)
         elementsNode.setNode(

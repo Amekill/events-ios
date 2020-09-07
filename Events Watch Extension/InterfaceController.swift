@@ -10,11 +10,22 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet weak var table: WKInterfaceTable!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        setTable()
+    }
+    
+    private func setTable() {
+        table.setNumberOfRows(5, withRowType: "EventRowController")
+        
+        for i in 0...3 {
+            let row = table.rowController(at: i) as! EventRowController
+            row.date.setText("\(i)")
+        }
     }
     
     override func willActivate() {
@@ -26,5 +37,4 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }
